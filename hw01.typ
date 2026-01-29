@@ -32,6 +32,32 @@ so $alpha(t_0) dot alpha'(t_0) = 0$. Since neither vector is zero (the former be
 
 = 1-2-3
 
-Since the $alpha''$ is identically zero, $alpha'$ must be constant. Hence, the trace of $alpha$ is a line or line segment.
+The trace of $alpha$ is a line or an open line segment (or nothing). To see this, let $I$ be the domain of $alpha$ and let $t_0 in I$ (if $I$ is instead empty, then the trace of $alpha$ is empty). Since $alpha''$ is identically zero, all subsequent derivatives also vanish, and the Taylor expansion of $alpha$ about $t_0$ at any point $t in I$ becomes the finite sum
+$
+  alpha(t)
+    = alpha(t_0) + alpha'(t_0) (t - t_0)
+    = u + v t
+$
+where $u = alpha(t_0) - alpha'(t_0) t_0$ and $v = alpha'(t_0)$ are constants. This identifies the trace of $alpha$ as a line (if $I = RR$) or an open line segment (if $I$ is a bounded open interval).
 
 = 1-2-5
+
+Recall that the derivative of $abs(alpha(t))^2 = alpha(t) dot alpha(t)$ is $2 alpha(t) dot alpha'(t)$. We have
+$
+  abs(alpha(t)) "constant"
+    &iff abs(alpha(t))^2 "constant" && "(because" abs(alpha(t)) >= 0 ")" \
+    &iff d/(d t) abs(alpha(t))^2 = 0 thick forall t in I \
+    &iff 2 alpha(t) dot alpha'(t) = 0 thick forall t in I \
+    &iff alpha(t) dot alpha'(t) = 0 thick forall t in I \
+$
+Therefore, if $abs(alpha(t))$ is a _nonzero_ constant, then not only do we have $alpha(t) dot alpha'(t) = 0$ for all $t in I$, but we also have that $alpha(t)$ and $alpha'(t)$ are nonzero for all $t in I$ (the latter by hypothesis). Hence, $alpha(t)$ and $alpha'(t)$ are orthogonal for all $t in I$.
+
+Conversely, if $alpha(t)$ and $alpha'(t)$ are orthogonal for all $t in I$, then $alpha(t)$ is never zero and $alpha(t) dot alpha'(t) = 0$ for all $t in I$, so $abs(alpha(t))$ is a nonzero constant.
+
+= 1-3-1
+
+= 1-3-2
+
+= 1-3-4
+
+= 1-3-5
