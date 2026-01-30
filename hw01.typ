@@ -81,7 +81,27 @@ It follows that $theta = pi slash 4$ because $theta in [0, pi]$. Since $t$ was a
 
 = 1-3-2
 
+1. One such parametrization is
+  $
+    alpha(t) &= (t + cos(t + pi slash 2), 1 - sin(t + pi slash 2)) \
+    alpha'(t) &= (1 - sin(t + pi slash 2), - cos(t + pi slash 2))
+  $
+  where $t$ is the distance (or angle) rolled. The parametrized curve has singular points when $sin(t + pi slash 2) = 1$ and $cos(t + pi slash 2) = 0$. Clearly, such is the case if and only if $t = 2 pi k$ for some $k in ZZ$. Thus, the singular points are just the set $2 pi ZZ$.
 
+2. The arc length from $t = 0$ to $t = 2 pi$ (one full rotation) is
+  $
+    integral_0^(2 pi) abs(alpha'(t)) thin d t
+      &= integral_0^(2 pi) sqrt([1 - 2 sin(t + pi slash 2) + sin^2(t + pi slash 2)] + cos^2(t + pi slash 2)) thin d t \
+      &= integral_0^(2 pi) sqrt(2 - 2 sin(t + pi slash 2)) thin d t \
+      &= sqrt(2) integral_0^(2 pi) sqrt(1 - sin(t + pi slash 2)) thin d t \
+      &= sqrt(2) integral_0^(2 pi) sqrt(1 - 2 sin((2 t + pi) / 4) cos((2 t + pi) / 4)) thin d t \
+      &= sqrt(2) integral_0^(2 pi) sqrt(sin^2((2 t + pi) / 4) + cos^2((2 t + pi) / 4) - 2 sin((2 t + pi) / 4) cos((2 t + pi) / 4)) thin d t \
+      &= sqrt(2) integral_0^(2 pi) [sin((2 t + pi) / 4) - cos((2 t + pi) / 4)] thin d t \
+      &= 2 sqrt(2) [-cos((2 t + pi) / 4) - sin((2 t + pi) / 4)]_0^(2 pi) \
+      &= 2 sqrt(2) [cos(pi/4) + sin(pi/4) - cos((5pi)/4) - sin((5pi)/4)] \
+      &= 2 sqrt(2) [1/sqrt(2) + 1/sqrt(2) + 1/sqrt(2) + 1/sqrt(2)] \
+      &= 8
+  $
 
 = 1-3-4
 
