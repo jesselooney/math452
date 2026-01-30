@@ -55,7 +55,7 @@ $
     &iff abs(alpha(t))^2 "constant" && "(because" abs(alpha(t)) >= 0 ")" \
     &iff d/(d t) abs(alpha(t))^2 = 0 thick forall t in I \
     &iff 2 alpha(t) dot alpha'(t) = 0 thick forall t in I \
-&iff alpha(t) dot alpha'(t) = 0 thick forall t in I \
+    &iff alpha(t) dot alpha'(t) = 0 thick forall t in I \
 $
 Therefore, if $abs(alpha(t))$ is a _nonzero_ constant, then not only do we have $alpha(t) dot alpha'(t) = 0$ for all $t in I$, but we also have that $alpha(t)$ and $alpha'(t)$ are nonzero for all $t in I$ (the latter by hypothesis). Hence, $alpha(t)$ and $alpha'(t)$ are orthogonal for all $t in I$.
 
