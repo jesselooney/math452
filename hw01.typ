@@ -61,12 +61,13 @@ Therefore, if $abs(alpha(t))$ is a _nonzero_ constant, then not only do we have 
 
 Conversely, if $alpha(t)$ and $alpha'(t)$ are orthogonal for all $t in I$, then $alpha(t)$ is never zero and $alpha(t) dot alpha'(t) = 0$ for all $t in I$, so $abs(alpha(t))$ is a nonzero constant.
 
+#pagebreak()
+
 = 1-3-1
 
 The tangent lines to $alpha$ are
 $
   alpha'(t) = (3, 6t, 6t^2) \
-  "with" \
   abs(alpha'(t)) = 3 sqrt(1 + 4t^2 + 4t^4) = 3 (2t^2 + 1) = 6 t^2 + 3
 $
 and one direction vector for the described line is $v = (1, 0, 1)$ with $abs(v) = sqrt(2)$. Suppose $t$ is in the domain of $alpha$. We consider the angle $theta in [0, pi]$ between $alpha'(t)$ and $v$. Since $alpha$ is regular, $alpha'(t) != 0$, so $abs(alpha'(t)) != 0$, so we can write
@@ -102,6 +103,8 @@ It follows that $theta = pi slash 4$ because $theta in [0, pi]$. Since $t$ was a
       &= 2 sqrt(2) [1/sqrt(2) + 1/sqrt(2) + 1/sqrt(2) + 1/sqrt(2)] \
       &= 8
   $
+
+#pagebreak()
 
 = 1-3-4
 
