@@ -118,7 +118,25 @@ It follows that $theta = pi slash 4$ because $theta in [0, pi]$. Since $t$ was a
   $
   Thus, we may say that $alpha$ is regular except at $t = pi slash 2$.
 
-2. 
+2. In Figure 1-9 in the textbook, connect the point labeled $alpha(t)$ (denote this point by $P$) to the closest point $Q$ on the y-axis using a horizontal line segment. This line segment must have length $overline(P Q) = alpha_x (t) = sin t$. This line segment also completes a right triangle $Delta P Q R$ where $R$ is the unlabeled point in the figure where the tangent to $alpha$ at $t$ intersects the y-axis. Denote the length of $P R$, the desired segment of the tangent of the tractrix, by $ell$. From the figure and the statement of the problem ($t$ is the angle made by the y-axis with $alpha'(t)$), we have that the measure of the angle $P R Q$ is $t$. Therefore, $sin t = overline(P Q) slash overline(P R)$, or $ell = sin t slash sin t = 1$.
 
 
 = 1-3-5
+We first compute
+$
+  alpha'(t)
+    &= ((3 a (1 + t^3) - 3 a t dot 3 t^2)/(1 + t^3)^2,
+        (6 a t (1 + t^3) - 3 a t^2 dot 3 t ^2)/(1 + t^3)^2) \
+    &= ((3 a + 3 a t^3 - 9 a t^3)/(1 + t^3)^2,
+        (6 a t + 6 a t^4 - 9 a t^4)/(1 + t^3)^2) \
+//    &= ((3 a - 6 a t^3)/(1 + t^3)^2,
+//        (6 a t - 3 a t^4)/(1 + t^3)^2) \
+    &= ((3 a - 6 a t^3)/(1 + 2 t^3 + t^6),
+        (6 a t - 3 a t^4)/(1 + 2 t^3 + t^6))
+$
+for use in the subsequent problems.
+
+1. We have $alpha(0) = (0, 0)$, so $alpha$ touches the x-axis at $t = 0$. Moreover, $alpha'(0) = (3 a, 0)$, which is parallel to the x-axis (assuming $a != 0$). These two facts together say that $alpha$ is tangent to the x-axis at $t = 0$. (If $a = 0$, then the trace of $alpha$ consists only of the single point $(0, 0)$, in which case $alpha$ is not tangent to the x-axis at $t = 0$.)
+
+2. 
+
