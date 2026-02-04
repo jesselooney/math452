@@ -108,4 +108,17 @@ It follows that $theta = pi slash 4$ because $theta in [0, pi]$. Since $t$ was a
 
 = 1-3-4
 
+1. $alpha$ is differentiable because its derivative exists via the usual rules of differentiation:
+  $
+    alpha'(t) = (cos t, -sin t + 1/2 cot t/2 sec^2 t/2)
+  $
+  Suppose $t in (0, pi)$ such that $alpha'(t) = 0$. Then $cos t = 0$, so $t = pi slash 2$ (because $t in (0, pi)$). Hence, singular points can only occur at $t = pi slash 2$. Indeed, $t = pi slash 2$ is a singular point, because, in addition to $cos pi slash 2 = 0$, we have
+  $
+    -sin pi/2 + 1/2 cot pi/4 sec^2 pi/4 = -1 + 1/2 dot 1 dot 2 = 0
+  $
+  Thus, we may say that $alpha$ is regular except at $t = pi slash 2$.
+
+2. 
+
+
 = 1-3-5
