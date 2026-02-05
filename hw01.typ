@@ -172,3 +172,43 @@ for use in the subsequent problems.
   $
 
 = Additional \#1
+
+The trace of curve (c) is sketched in Figure 1, as are the projections of the traces of curves (a) and (b) onto the $x y$-plane. Note that the trace of curve (a) lies in the plane $z = 1$ while the trace of curve (b) lies in the plane $z = -1$.
+
+== TODO: Attach figure!
+
+1.
+  $
+    alpha'(t) &= (-6 sin 2 t, 6 cos 2 t, 0) \
+    s(t)
+      &= integral_0^t abs(alpha'(t')) thin d t' \
+      &= integral_0^t sqrt(36 sin^2 2 t' + 36 cos^2 2 t' + 0^2) thin d t' \
+      &= integral_0^t 6 thin d t' \
+      &= 6 t \
+    alpha(s) &= (3 cos s/3, 3 sin s/3, 1)
+  $
+
+2.
+  $
+    alpha'(t) &= (-sin t, cos t, 0) \
+    s(t)
+      &= integral_0^t abs(alpha'(t')) thin d t' \
+      &= integral_0^t sqrt(sin^2 t' + cos^2 t' + 0^2) thin d t' \
+      &= integral_0^t thin d t' \
+      &= t \
+    alpha(s) &= (cos s, sin s, -1)
+  $
+
+3.
+  $
+    alpha'(t) &= (2, -3) \
+    s(t)
+      &= integral_0^t abs(alpha'(t')) thin d t' \
+      &= integral_0^t sqrt(13) thin d t' \
+      &= sqrt(13) t \
+    alpha(s) &= (1 + (2 s)/sqrt(13), 2 - (3 s)/sqrt(13))
+  $
+
+= Additional \#2
+
+
