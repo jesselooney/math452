@@ -120,6 +120,8 @@ It follows that $theta = pi slash 4$ because $theta in [0, pi]$. Since $t$ was a
 
 2. In Figure 1-9 in the textbook, connect the point labeled $alpha(t)$ (denote this point by $P$) to the closest point $Q$ on the y-axis using a horizontal line segment. This line segment must have length $overline(P Q) = alpha_x (t) = sin t$. This line segment also completes a right triangle $Delta P Q R$ where $R$ is the unlabeled point in the figure where the tangent to $alpha$ at $t$ intersects the y-axis. Denote the length of $P R$, the desired segment of the tangent of the tractrix, by $ell$. From the figure and the statement of the problem ($t$ is the angle made by the y-axis with $alpha'(t)$), we have that the measure of the angle $P R Q$ is $t$. Therefore, $sin t = overline(P Q) slash overline(P R)$, or $ell = sin t slash sin t = 1$.
 
+#pagebreak()
+
 = 1-3-5
 We first compute
 $
@@ -150,6 +152,8 @@ for use in the subsequent problems.
       &= (0, 0)
   $
 
+#pagebreak()
+
 3. First,
   $
     lim_(t->-1) [a + alpha_x (t) + alpha_y (t)]
@@ -171,11 +175,11 @@ for use in the subsequent problems.
       &= 0/9 = 0
   $
 
+#pagebreak()
+
 = Additional \#1
 
 The trace of curve (c) is sketched in Figure 1, as are the projections of the traces of curves (a) and (b) onto the $x y$-plane. Note that the trace of curve (a) lies in the plane $z = 1$ while the trace of curve (b) lies in the plane $z = -1$.
-
-== TODO: Attach figure!
 
 1.
   $
@@ -209,6 +213,40 @@ The trace of curve (c) is sketched in Figure 1, as are the projections of the tr
     alpha(s) &= (1 + (2 s)/sqrt(13), 2 - (3 s)/sqrt(13))
   $
 
+#pagebreak()
+
 = Additional \#2
 
+Suppose $u, v, w in RR^3$ and write $u = (u_1, u_2, u_3)$, $v = (v_1, v_2, v_3)$, and $w = (w_1, w_2, w_3)$. We have
+$
+  (u dot w) v - (v dot w) u
+    = (&[u dot w] v_1 - [v dot w] u_1, \
+    &[u dot w] v_2 - [v dot w] u_2, \
+    &[u dot w] v_3 - [v dot w] u_3) \ \
 
+  (u times v) times w
+    = (&u_2 v_3 - u_3 v_2, u_3 v_1 - u_1 v_3, u_1 v_2 - u_2 v_1) times w \
+      (&[u_3 v_1 - u_1 v_3] w_3 - [u_1 v_2 - u_2 v_1] w_2, \
+       &[u_1 v_2 - u_2 v_1] w_1 - [u_2 v_3 - u_3 v_2] w_3, \
+       &[u_2 v_3 - u_3 v_2] w_2 - [u_3 v_1 - u_1 v_3] w_1) \
+$
+We show that the corresponding components in each vector are equal:
+$
+  [u dot w] v_1 - [v dot w] u_1
+    &= u_1 v_1 w_1 + u_2 v_1 w_2 + u_3 v_1 w_3 - u_1 v_1 w_1 - u_1 v_2 w_2 - u_1 v_3 w_3 \
+    &= u_2 v_1 w_2 + u_3 v_1 w_3 - u_1 v_2 w_2 - u_1 v_3 w_3 \
+    &= u_3 v_1 w_3 - u_1 v_3 w_3 - u_1 v_2 w_2 + u_2 v_1 w_2 \
+    &= [u_3 v_1 - u_1 v_3] w_3 - [u_1 v_2 - u_2 v_1] w_2 \ \
+
+  [u dot w] v_2 - [v dot w] u_2
+    &= u_1 v_2 w_1 + u_2 v_2 w_2 + u_3 v_2 w_3 - u_2 v_1 w_1 - u_2 v_2 w_2 - u_2 v_3 w_3 \
+    &= u_1 v_2 w_1 + u_3 v_2 w_3 - u_2 v_1 w_1 - u_2 v_3 w_3 \
+    &= u_1 v_2 w_1 - u_2 v_1 w_1 - u_2 v_3 w_3 + u_3 v_2 w_3 \
+    &= [u_1 v_2 - u_2 v_1] w_1 - [u_2 v_3 - u_3 v_2] w_3 \ \
+
+  [u dot w] v_3 - [v dot w] u_3
+    &= u_1 v_3 w_1 + u_2 v_3 w_2 + u_3 v_3 w_3 - u_3 v_1 w_1 - u_3 v_2 w_2 - u_3 v_3 w_3 \
+    &= u_1 v_3 w_1 + u_2 v_3 w_2 - u_3 v_1 w_1 - u_3 v_2 w_2 \
+    &= u_2 v_3 w_2 - u_3 v_2 w_2 - u_3 v_1 w_1 + u_1 v_3 w_1 \
+    &= [u_2 v_3 - u_3 v_2] w_2 - [u_3 v_1 - u_1 v_3] w_1
+$
