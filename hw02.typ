@@ -148,3 +148,30 @@ See Figures 1(a--b) for sketches of the examples in the corresponding problems.
     b'(s) = (-sin sqrt(2) s, -cos sqrt(2) s, 0) = 1 dot n(s) \
   $
   so $tau(s) = 1$ as desired.
+
+#pagebreak()
+
+= Additional \#2
+
+Write $u(t) = (a(t), b(t), c(t))$ and $v(t) = (x(t), y(t), z(t))$.
+
+1.
+  $
+    [u(t) dot v(t)]'
+      &= [a(t) x(t) + b(t) y(t) + c(t) z(t)]' \
+      &= [a'(t) x(t) + a(t) x'(t)] + [b'(t) y(t) + b(t) y'(t)] + [c'(t) z(t) + c(t) z'(t)] \
+      &= [a'(t) x(t) + b'(t) y(t) + c'(t) z(t)] + [a(t) x'(t) + b(t) y'(t) + c(t) z'(t)] \
+      &= u'(t) dot v(t) + u(t) dot v'(t)
+  $
+
+2. 
+  $
+    [u(t) times v(t)]'
+      &= &&(b(t) z(t) - c(t) y(t), c(t) x(t) - a(t) z(t), a(t) y(t) - b(t) x(t))' \
+      &= &&(b'(t) z(t) + b(t) z'(t) - c'(t) y(t) - c(t) y'(t), \
+         &&& #hide($($) c'(t) x(t) + c(t) x'(t) - a'(t) z(t) - a(t) z'(t), \
+         &&& #hide($($) a'(t) y(t) + a(t) y'(t) - b'(t) x(t) - b(t) x'(t)) \
+      &= && (b'(t) z(t) - c'(t) y(t), c'(t) x(t) - a'(t) z(t), a'(t) y(t) - b'(t) x(t)) \
+      && +& (b(t) z'(t) - c(t) y'(t), c(t) x'(t) - a(t) z'(t), a(t) y'(t) - b(t) x'(t)) \
+      &= && u'(t) times v(t) + u(t) times v'(t)
+  $
