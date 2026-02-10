@@ -82,5 +82,9 @@ $
 
 = 1-4-4
 
+Let $v_i = (a_i, b_i, c_i)$ for $i=1,2$. We will show that $v_1 = lambda v_2$ for some $lambda in RR$, which is clearly equivalent to (but much cleaner than) the given condition (e.g. let $lambda = a_1 slash a_2 = dots.c$)
+
 = 1-4-7
+
+
 
