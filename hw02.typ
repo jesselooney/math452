@@ -86,7 +86,55 @@ Let $v_i = (a_i, b_i, c_i)$ for $i=1,2$. We will show that $v_1 = lambda v_2$ fo
 
 = 1-4-7
 
+#pagebreak()
+
 = 1-5-1
+
+1. We have
+  $
+    alpha'(s) &= (-a/c sin s/c, a/c cos s/c, b/c) \
+    abs(alpha'(s)) &= sqrt(a^2/c^2 (sin^2 s/c + cos^2 s/c) + b^2/c^2) = sqrt((a^2 + b^2)/c^2) = sqrt(c^2/c^2) = 1
+  $
+  so $alpha$ must be parametrized by arc length.
+
+2. We have
+  $
+    alpha''(s) &= (-a/c^2 cos s/c, -a/c^2 sin s/c, 0) \
+    kappa(s) &= abs(alpha''(s)) = sqrt(a^2/c^4(cos^2 s/c + sin^2 s/c) + 0) = a/c^2 \
+    t(s) &= alpha'(s) = (-a/c sin s/c, a/c cos s/c, b/c) \
+    n(s) &= (alpha''(s)) / kappa(s) = (-cos s/c, -sin s/c, 0) \
+    b(s) &= t(s) times n(s) = (b/c sin s/c, -b/c cos s/c, a/c) \
+    b'(s) &= (b/c^2 cos s/c, b/c^2 sin s/c, 0) = -b/c^2 n(s) \
+    tau(s) &= -b/c^2
+  $
+  In summary, the curvature and torsion are both constants given by $kappa = a slash c^2$ and $tau = -b slash c^2$.
+
+3. The osculating plane of $alpha$ has normal $t times n = b$, so it is given by
+  $
+    b(s) dot [(x, y, z) - alpha(s)] = 0
+  $
+
+4. We first show these lines meet the $z$-axis at all by showing that their projections onto the $x y$-plane coincide with the same projections of the lines from the origin to $alpha(s)$. Since both sets of lines intersect at the projection of $alpha(s)$, it is enough to show that they are parallel---that is, that the projections $n_(x y)$ and $alpha_(x y)$ of $n(s)$ and $alpha(s)$ are parallel. Indeed
+  $
+    -a n_(x y)(s) = -a (-cos s/c, -sin s/c) = (a cos s/c, a sin s/c) = alpha_(x y)(s)
+  $
+
+  Now we show that the lines make a constant angle $pi slash 2$ with the $z$-axis. We need only show this is the angle between $n$ and $e_3 = (0, 0, 1)$. We know $n(s)$ and $e_3$ make an angle $theta(s) in [0, pi]$ given by
+  $
+    cos theta(s) = abs(n(s)) abs(e_3) cos theta(s) = n(s) dot e_3 = 0
+  $
+  Thus $theta(s) = pi slash 2$.
+
+#pagebreak()
+
+5. Suppose $theta(s) in [0, pi]$ is the angle between $t(s)$ and $e_3$ (which is also the angle between the tangent lines and the $z$-axis). Then
+  $
+    cos theta(s) = abs(t(s)) abs(e_3) cos theta(s) = t(s) dot e_3 = b/c
+  $
+  But $cos$ is injective on $[0, pi]$, so $cos theta(s)$ being constant implies $theta(s)$ is constant.
+
+#pagebreak()
+
 = 1-5-2
 = 1-5-4
 = 1-5-6
