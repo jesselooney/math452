@@ -86,5 +86,65 @@ Let $v_i = (a_i, b_i, c_i)$ for $i=1,2$. We will show that $v_1 = lambda v_2$ fo
 
 = 1-4-7
 
+= 1-5-1
+= 1-5-2
+= 1-5-4
+= 1-5-6
+= 1-5-8
 
+1. 
 
+#pagebreak()
+
+= Additional \#1
+
+*TODO: insert figures*
+
+See Figures 1(a--b) for sketches of the examples in the corresponding problems.
+
+1. Let
+  $
+    alpha(s)   &= (sin s, cos s, 0) \
+    alpha'(s)  &= (cos s, -sin s, 0) \
+    alpha''(s) &= (-sin s, -cos s, 0)
+  $
+  Observe that $abs(alpha'(s)) = sqrt(cos^2 s + sin^2 s + 0) = 1$ so $alpha$ is indeed parametrized by arc length. We have $kappa(s) = abs(alpha''(s)) = sqrt(sin^2 s + cos^2 s + 0) = 1$ as desired. Thus, we have
+  $
+    t(s)
+      &= alpha'(s)
+      &&= (#hide($-$) cos s, -sin s, 0) \
+    n(s)
+      &= (alpha''(s)) / kappa(s)
+      &&= (-sin s, -cos s, 0) \
+    b(s)
+      &= t(s) times b(s)
+      &&= (0, 0, -1) \
+    b'(s)
+      &= (0, 0, 0)
+      &&= 0 dot n(s)
+  $
+  so $tau(s) = 0$ as desired.
+
+2. Let
+  $
+    alpha(s)   =&& 1/2 & (#hide($-$) sin sqrt(2) s, #hide($-$) cos sqrt(2) s, sqrt(2) s) \
+    alpha'(s)  =&& 1/sqrt(2) & (#hide($-$) cos sqrt(2) s, -sin sqrt(2) s, #hide($sqrt(2)$) 1) \
+    alpha''(s) =&& & (-sin sqrt(2) s, -cos sqrt(2) s, #hide($sqrt(2)$) 0)
+  $
+  Observe that $abs(alpha'(s)) = sqrt(cos^2 sqrt(2) s + sin^2 sqrt(2) s + 1) slash sqrt(2) = 1$ so $alpha$ is indeed parametrized by arc length. We have $kappa(s) = abs(alpha''(s)) = sqrt(sin^2 sqrt(2) s + cos^2 sqrt(2) s + 0) = 1$ as desired. Thus, we have
+  $
+    t(s)
+      &= alpha'(s)
+      &&= 1/sqrt(2) & (#hide($-$) cos sqrt(2) s, -sin sqrt(2) s, #hide($-$) 1) \
+    n(s)
+      &= (alpha''(s)) / kappa(s)
+      &&= & (-sin sqrt(2) s, -cos sqrt(2) s, #hide($-$) 0) \
+    b(s)
+      &= t(s) times n(s)
+      &&= 1/sqrt(2) & (#hide($-$) cos sqrt(2) s, -sin sqrt(2) s, -1)
+  $
+  so
+  $
+    b'(s) = (-sin sqrt(2) s, -cos sqrt(2) s, 0) = 1 dot n(s) \
+  $
+  so $tau(s) = 1$ as desired.
