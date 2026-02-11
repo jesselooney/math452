@@ -138,17 +138,32 @@ Let $v_i = (a_i, b_i, c_i)$ for $i=1,2$. We will show that $v_1 = lambda v_2$ fo
 = 1-5-2
 = 1-5-4
 
-Suppose $alpha: I -> RR^3$ is a parametrized curve whose normals all pass through a point $p in RR^3$. We must have that $alpha$ is regular, or else the normals are not always defined (the normal _vector_ would still exist at all points, but it would equal zero at some points, at which it would not define a normal line). Without loss of generality, then, $alpha$ is parametrized by arc length (see Remark 2 in Section 1-5). Since the normal of $alpha$ at $s in I$ passes through $p$, it contains both $n(s)$ and the points $alpha(s)$ and $p$. Therefore, $n(s) parallel alpha(s) - p$, so $alpha(s) - p = a n(s)$ for some $a in RR$. Therefore, we have
+Suppose $alpha: I -> RR^3$ is a regular curve parametrized by arc length whose normals all pass through a fixed point $p in RR^3$ (we assume $kappa(s)$ is never zero so that the normals are always well defined). Thus, the normal to $alpha$ at $s in I$ contains both the vector $n(s)$ and the points $alpha(s)$ and $p$. Therefore, $n(s) parallel alpha(s) - p$, so there exists some $lambda(s)$ such that
+$
+  alpha(s) - p = lambda(s) n(s) \
+  alpha(s) - lambda(s) n(s) = p
+$
+Differentiating with respect to $s$, we have
+$
+  t - lambda' n - lambda (-kappa t - tau b) = 0 \
+  (1 + lambda kappa) t - lambda' n + lambda tau b = 0
+$
+Since $t,n,b$ are orthogonal, we must have
+$
+  1 + lambda kappa &= 0 \
+  - lambda' &= 0 \
+  lambda tau &= 0
+$
+The second equation says $lambda(s)$ is constant. The first says that constant must be $lambda = -1 slash kappa != 0$. Hence, the third equation says $tau(s) = 0$ (everywhere). Thus, (since $kappa != 0$ anywhere) the trace of $alpha$ is contained in a plane.
+
+Now we show that all points on the trace of $alpha$ are equidistant from $p$, which will force the trace to be contained in a circle. We have
 $
   d/(d s) abs(alpha(s) - p)^2
     = 2 (alpha(s) - p) dot d/(d s) (alpha(s) - p)
-    = 2 (alpha(s) - p) dot alpha'(s)
-    = 2 a n(s) dot t(s)
+    = 2 lambda(s) n(s) dot t(s)
     = 0
 $
-Therefore, $abs(alpha(s) - p)^2$ is constant, which implies $abs(alpha(s) - p)$ is constant as well (because squaring is injective over the non-negative reals). Thus, every point on the trace of $alpha$ lies at a uniform distance from $p$, so the trace of $alpha$ is contained in a spherical shell.
-
-*TODO: Not done! Need to show that the trace lies in a plane (e.g. $tau = 0$). See hint in book.*
+Since squaring is injective over the non-negative reals, we have shown that $abs(alpha(s) - p)$ is constant, as required.
 
 #pagebreak()
 
