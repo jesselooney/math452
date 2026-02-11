@@ -146,9 +146,99 @@ $
     = 2 a n(s) dot t(s)
     = 0
 $
-Therefore, $abs(alpha(s) - p)^2$ is constant, which implies $abs(alpha(s) - p)$ is constant as well (because squaring is injective over the non-negative reals). Thus, every point on the trace of $alpha$ lies at a uniform distance from $p$, so the trace of $alpha$ is contained in a circle.
+Therefore, $abs(alpha(s) - p)^2$ is constant, which implies $abs(alpha(s) - p)$ is constant as well (because squaring is injective over the non-negative reals). Thus, every point on the trace of $alpha$ lies at a uniform distance from $p$, so the trace of $alpha$ is contained in a spherical shell.
+
+*TODO: Not done! Need to show that the trace lies in a plane (e.g. $tau = 0$). See hint in book.*
+
+#pagebreak()
 
 = 1-5-6
+
+1. Suppose $rho : RR^3 -> RR^3$ is an orthogonal transformation with positive determinant. Suppose $u in RR^3$. Then
+  $
+    abs(rho u)
+      = sqrt(abs(rho u)^2)
+      = sqrt(rho u dot rho u)
+      = sqrt(u dot u)
+      = sqrt(abs(u)^2)
+      = abs(u)
+  $
+  so norms are preserved. Now suppose $u,v in RR^3$ differ by an angle $theta in [0, pi]$ (we assume $u,v != 0$). Let $theta_rho in [0, pi]$ be the angle between $rho u$ and $rho v$ (which must be nonzero because $u,v != 0$ and norms are preserved).
+  $
+    cos theta_rho
+      = (rho u dot rho v) / (abs(rho u) abs(rho v))
+      = (u dot v) / (abs(u) abs(v))
+      = cos theta
+  $
+  Since $cos$ is injective on $[0, pi]$, we have $theta_rho = theta$, so angles are preserved.
+
+2. Suppose $rho : RR^3 -> RR^3$ is an orthogonal transformation with positive determinant. We know that application of $rho$ is equivalent to multiplication by some fixed $3 times 3$ matrix. In the following, we treat $rho$ itself as that matrix. We note that since $rho$ is an orthogonal matrix with positive determinant, its determinant is in fact precisely $1$. Furthermore, since $rho$ has nonzero determinant, $rho$ is invertible with inverse $rho^(-1)$.
+
+  Now suppose $u,v in RR^3$. All vector variables are assumed to represent column vectors, and we will sometimes represent a matrix as a row of column vectors or a column of row vectors.
+
+  Invariant is a strange choice of word in this problem. We will show that $rho (u times v) = rho u times rho v$ using the definition of the vector product. That is, we will show that, for all $w in RR^3$, we have
+  $
+    rho (u times v) dot w = det(rho u, rho v, w)
+  $
+  Suppose $w in RR^3$. Since $rho$ is an orthogonal transformation, we have
+  $
+    rho (u times v) dot w
+      = rho (u times v) dot rho rho^(-1) w
+      = (u times v) dot rho^(-1) w
+      = det(u, v, rho^(-1) w)
+  $
+  using the definition of vector product. Observe that
+  $
+    mat((rho u)^T; (rho v)^T; w^T)
+      = mat(rho u, rho v, w)^T
+      = mat(rho u, rho v, rho rho^(-1) w)^T
+      = (rho mat(u, v, rho^(-1) w))^T
+      = mat(u^T; v^T; (rho^(-1) w)^T) rho^T
+  $
+  Since $det(rho^T) = det(rho) = 1$, taking determinants on either side of the previous equation gives
+  $
+    det(rho u, rho v, w)
+      = det(u, v, rho^(-1) w)
+  $
+  so $rho (u times v) dot w = det(rho u, rho v, w)$, as required.
+
+  If we drop the requirement that $rho$ have positive determinant, then the proposition does not hold. For example, $rho(u) = -u$ is an orthogonal transformation because it is clearly a linear map and also $-u dot -u = u dot u$ for all $u in RR^3$. But then
+  $
+    - (e_1 times e_2) = - e_3 != e_3 = -e_1 times -e_2
+  $
+
+#pagebreak()
+
+3. Suppose $rho: RR^3 -> RR^3$ is an orthogonal transformation with positive determinant and $v in RR^3$, so that $T(u) = rho u + v$ is a rigid motion. Suppose $alpha: I -> R^3$ is a parametrized curve. Let $beta = T alpha$. We have
+  $
+    beta'(t)   &= rho alpha'(t) \
+    beta''(t)  &= rho alpha''(t) \
+    beta'''(t) &= rho alpha'''(t) \
+  $
+  Let $t_0 in I$. We use the invariance of norms from part (a) to find that
+  $
+    s_beta (t)
+      &= integral_(t_0)^t abs(beta'(t)) thin d t
+      = integral_(t_0)^t abs(alpha'(t)) thin d t
+      = s_alpha (t) \
+
+    kappa_beta (t)
+      &= abs(beta''(t))
+      = abs(alpha''(t))
+      = kappa_alpha (t)
+  $
+  Using the torsion formula from Exercise 1-5-2 (\#6 on this homework), together with the fact from part (b), we find
+  $
+    tau_beta (t)
+      &= - (beta'(t) times beta''(t) dot beta'''(t)) / abs(kappa_beta (t))^2 \
+      &= - (rho alpha'(t) times rho alpha''(t) dot rho alpha'''(t)) / abs(kappa_alpha (t))^2 \
+      &= - (rho [alpha'(t) times alpha''(t)] dot rho alpha'''(t)) / abs(kappa_alpha (t))^2 \
+      &= - (alpha'(t) times alpha''(t) dot alpha'''(t)) / abs(kappa_alpha (t))^2 \
+      &= tau_alpha (t)
+  $
+
+#pagebreak()
+
 = 1-5-8
 
 1. 
