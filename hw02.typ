@@ -82,9 +82,11 @@ $
 
 = 1-4-4
 
-Let $v_i = (a_i, b_i, c_i)$ for $i=1,2$. We will show that $v_1 = lambda v_2$ for some $lambda in RR$, which is clearly equivalent to (but much cleaner than) the given condition (e.g. let $lambda = a_1 slash a_2 = dots.c$)
+The given condition says exatly that $v_1 = (a_1, b_1, c_1)$ is parallel to $v_2 = (a_2, b_2, c_2)$. But those vectors are the normal vectors for each plane (see Exercise 1-4-2), and two planes are parallel if and only if their normal vectors are parallel. Therefore, the condition holds if and only if the planes are parallel.
 
 = 1-4-7
+
+Notice that $v = (a, b, c)$ is the normal vector of the plane (see Exercise 1-4-2) and $u = (u_1, u_2, u_3)$ is the direction vector of the line. The given condition holds if and only if $v$ is orthogonal to $u$, which by definition happens if and only if $u$ lies in the plane normal to $v$. That is true if and only if the line is parallel to the plane.
 
 #pagebreak()
 
