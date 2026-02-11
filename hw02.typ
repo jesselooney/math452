@@ -136,6 +136,25 @@ Let $v_i = (a_i, b_i, c_i)$ for $i=1,2$. We will show that $v_1 = lambda v_2$ fo
 #pagebreak()
 
 = 1-5-2
+
+Recall that
+$
+  alpha' &= t \
+  alpha'' &= t' = kappa n \
+  alpha'''
+    &= (kappa n)' = kappa' n + kappa (- kappa t - tau b)
+    = (kappa n)' = - kappa^2 t + kappa' n - kappa tau b
+$
+Therefore,
+$
+    - (alpha' times alpha'' dot alpha''') / abs(kappa)^2
+    &= - (t times kappa n dot (- kappa^2 t + kappa' n - kappa tau b)) / abs(kappa)^2
+    = - (kappa b dot (- kappa^2 t + kappa' n - kappa tau b)) / abs(kappa)^2 \
+    &= - (0 + 0 - kappa^2 tau dot 1) / abs(kappa)^2
+    = (kappa^2 tau) / abs(kappa)^2
+    = tau
+$
+
 = 1-5-4
 
 Suppose $alpha: I -> RR^3$ is a regular curve parametrized by arc length whose normals all pass through a fixed point $p in RR^3$ (we assume $kappa(s)$ is never zero so that the normals are always well defined). Thus, the normal to $alpha$ at $s in I$ contains both the vector $n(s)$ and the points $alpha(s)$ and $p$. Therefore, $n(s) parallel alpha(s) - p$, so there exists some $lambda(s)$ such that
