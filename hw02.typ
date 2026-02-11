@@ -137,6 +137,17 @@ Let $v_i = (a_i, b_i, c_i)$ for $i=1,2$. We will show that $v_1 = lambda v_2$ fo
 
 = 1-5-2
 = 1-5-4
+
+Suppose $alpha: I -> RR^3$ is a parametrized curve whose normals all pass through a point $p in RR^3$. We must have that $alpha$ is regular, or else the normals are not always defined (the normal _vector_ would still exist at all points, but it would equal zero at some points, at which it would not define a normal line). Without loss of generality, then, $alpha$ is parametrized by arc length (see Remark 2 in Section 1-5). Since the normal of $alpha$ at $s in I$ passes through $p$, it contains both $n(s)$ and the points $alpha(s)$ and $p$. Therefore, $n(s) parallel alpha(s) - p$, so $alpha(s) - p = a n(s)$ for some $a in RR$. Therefore, we have
+$
+  d/(d s) abs(alpha(s) - p)^2
+    = 2 (alpha(s) - p) dot d/(d s) (alpha(s) - p)
+    = 2 (alpha(s) - p) dot alpha'(s)
+    = 2 a n(s) dot t(s)
+    = 0
+$
+Therefore, $abs(alpha(s) - p)^2$ is constant, which implies $abs(alpha(s) - p)$ is constant as well (because squaring is injective over the non-negative reals). Thus, every point on the trace of $alpha$ lies at a uniform distance from $p$, so the trace of $alpha$ is contained in a circle.
+
 = 1-5-6
 = 1-5-8
 
