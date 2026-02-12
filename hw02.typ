@@ -277,13 +277,69 @@ Since squaring is injective over the non-negative reals, we have shown that $abs
 
 = 1-5-8
 
-1. 
+1. We first compute the arc length.
+  $
+    s(t)
+      &= integral_0^t abs(alpha'(t)) thin d t
+      = integral_0^t sqrt(1^2 + sinh^2 t) thin d t
+      &= integral_0^t cosh t thin d t
+      = sinh t - sinh 0
+      = sinh t
+  $
+  To convert back from the arc length parametrization, we use the inverse function
+  $
+    t(s) &= sinh^(-1) s wide t'(s) &= 1/sqrt(s^2 + 1) = 1/sqrt(sinh^2 t(s) + 1) = sech t(s)
+  $
+  Note that we are overloading the usual notation for the tangent vector; in this problem, we will never refer to the tangent vector as $t(s)$ but always instead as $alpha'(s)$. Blame whoever chose $t$ as the default parameter and then decided that one of the most important curves should also be called $t$.
+  $
+    alpha'(s)
+      &= (d alpha)/(d s)
+      = (d alpha)/(d t) (d t)/(d s)
+      = (1, sinh t(s)) sech t(s)
+      = (sech t(s), tanh t(s)) \
+  
+    alpha''(s)
+      &= d/(d s) alpha'(s)
+      = [d/(d t) alpha'(s)] (d t)/(d s)
+      = (- tanh t(s) sech t(s), sech^2 t(s)) sech t(s) \
+      &= (- tanh t(s) sech^2 t(s), sech^3 t(s))
+  $
+  We have
+  $
+    abs(alpha''(s))
+      &= sqrt(tanh^2 t(s) sech^4 t(s) + sech^6 t(s))
+      = sqrt((sinh^2 t(s) + 1) sech^6 t(s)) \
+      &= sqrt(sech^4 t(s))
+      = sech^2 t(s)
+  $
+  As noted in Remark 1,
+  $
+    abs(kappa(s)) = abs(alpha''(s)) = sech^2 t(s) = 1 / (cosh^2 t(s))
+  $
+  Define the unit vector
+  $
+    overline(n)(s) = (- tanh t(s), sech t(s)) = (alpha''(s)) / abs(kappa(s)) = kappa(s)/abs(kappa(s)) n(s)
+  $
+  We will show that, in fact, $overline(n) = n$, so that $kappa(s) = abs(kappa(s))$. First,
+  $
+    alpha(t) dot overline(n)(t) = - tanh t sech t + tanh t sech t = 0
+  $
+  Since $overline(n)$ is also unit, we need only show that ${alpha', overline(n)}$ is a positively-oriented basis. The change-of-basis matrix from this basis into ${e_1, e_2}$ is
+  $
+    mat(alpha'_1, overline(n)_1; alpha'_2, overline(n)_2)
+  $
+  with determinant
+  $
+    sech^2 t + tanh^2 t >= sech^2 t > 0
+  $
+  as desired. Therefore, $overline(n) = n$, so $kappa(s) = abs(kappa(s))$, so
+  $
+    kappa(t) = 1/(cosh^2 t)
+  $
 
 #pagebreak()
 
 = Additional \#1
-
-*TODO: insert figures*
 
 See Figures 1(a--b) for sketches of the examples in the corresponding problems.
 
