@@ -66,4 +66,24 @@
 
 2. No. The statement does not even make sense, since $alpha$ does not have tangent lines at all points. Even ignoring that, $alpha$ could proceed linearly, then slow to a stop, then continue linearly in a new direction, and all its tangent lines (the ones that exist) would pass through the kink in the trace of $alpha$, which would nonetheless not be a line (segment).
 
+#set math.mat(delim: "[")
 
+= 2-2-1
+
+We first parametrize the positive $y$ portion of the surface. Let $V = {(x, y, z) mid(|) x^2 + y^2 = 1, y > 0}$ and $U = (0, pi) times RR$. Define $X: U -> V$ by
+$
+  X(theta, z) = (cos theta, sin theta, z)
+$
+Clearly, $X$ is $C^infinity$ and $X(U) = V$. Moreover, since cosine is injective on $(0, pi)$, we can define
+$
+  X^(-1)(x, y, z) = (cos^(-1) x, z)
+$
+which is in fact the inverse of $X$ and is continuous because $cos^(-1)$ is continuous (in fact, differentiable) on $(0, pi)$. Finally, the differential at $q = (theta, z) in U$ is
+$
+  d X_q = mat(-sin theta&, 0; cos theta&, 0; 0&, 1)
+$
+which is injective since the columns are linearly independent. Since the cylinder has radial symmetry, we can just rotate our coordinate system about the $z$-axis and the "same" parametrization above will cover a different arc of length $pi$ on the surface. We only need two more parametrizations to cover the surface, one covering angles $theta$ in $(3 pi slash 4, 7 pi slash 4)$ and another covering angles in $(-3 pi slash 4, pi slash 4)$.
+
+#pagebreak()
+
+= 2-2-2
