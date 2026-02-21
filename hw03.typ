@@ -163,3 +163,19 @@ Let $V'$ be an open neighborhood of $p$ contained in $V$ and small enough not to
 2. Yes. Let $x = 0 in R^n$. Then we have $d T_x = T$, so $T$ is given by a matrix, and thus $T$ is a linear map.
 
 = Additional \#2
+
+1. We assume $V$ is finite-dimensional. In this case, since the domain and codomain of $T$ have the same dimension, we need only show that $T$ is injective.
+  Suppose $u in V$ such that $T(u) = 0$. Then
+  $
+    angle.l u, u angle.r = angle.l T(u), T(u) angle.r = angle.l 0, 0 angle.r = 0
+  $
+  so we must have $u = 0$. Since $T$ is a linear map with a trivial kernel, $T$ is injective.
+
+2. Suppose $lambda$ is a real eigenvalue of $T$ with some (nonzero) eigenvector $u in V$. Then
+  $
+    lambda^2 angle.l u, u angle.r
+      = angle.l lambda u, lambda u angle.r
+      = angle.l T u, T u angle.r
+      = angle.l u, u angle.r
+  $
+  Since $u$ is nonzero, $angle.l u, u angle.r$ is nonzero, so we have $lambda^2 = 1$, which entails $abs(lambda) = 1$.
