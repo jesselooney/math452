@@ -88,7 +88,7 @@ which is injective since the columns are linearly independent. Since the cylinde
 
 = 2-2-2
 
-The first set (call it $S_1$) is not a regular surface. Consider the point $p = (1, 0) in S_1$. Suppose $V$ is an open neighborhood around $p$. Then $V sect S_1$ is closed, because $p in V sect S_1$ but any neighborhood of $p$ contains points not in $S_1$, so no neighborhood is contained in $V sect S_1$. For any choice of open set $U subset.eq RR^2$, there does not exist a homeomorphism $X: U -> V sect S_1$, because then $X(U) = V sect S_1$, so $X$ maps an open set to a non-open set, which contradicts the continuity of the inverse of $X$. *TODO*
+The first set (call it $S_1$) is not a regular surface. Suppose $S_1$ is a regular surface. Consider the point $p = (1, 0) in S_1$. There is an open neighborhood $V subset.eq RR^3$ containing $p$, an open set $U subset.eq RR^2$, and a map $X: U -> V sect S_1$ such that, in particular, $X$ is a homeomorphism. Since $U$ is open in $RR^2$, $U$ has no boundary points. However, $V sect S_1$ has a boundary point $p$. This contradicts that the two sets are homeomorphic.
 
 The second set, $S_2$, is a regular surface. Let $U = {(x, y) mid(|) x^2 + y^2 < 1} subset.eq RR^2$ be the open unit disk. Define the smooth function $f: U -> RR$ by $f(x, y) = 0$. Clearly, $S_2 = {(x, y, f(x, y)) mid(|) (x, y) in U}$. By the Graph Theorem, then, $S_2$ is a regular surface.
 
