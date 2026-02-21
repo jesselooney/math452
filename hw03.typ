@@ -88,7 +88,7 @@ which is injective since the columns are linearly independent. Since the cylinde
 
 = 2-2-2
 
-The first set (call it $S_1$) is not a regular surface. Consider the point $p = (1, 0) in S_1$. Suppose $V$ is an open neighborhood around $p$. Then $V sect S_1$ is not open, because $p in V sect S_1$ but any neighborhood of $p$ contains points not in $S_1$, so no neighborhood is contained in $V sect S_1$. For any choice of open set $U subset.eq RR^2$, there does not exist a homeomorphism $X: U -> V sect S_1$, because then $X(U) = V sect S_1$, so $X$ maps an open set to a non-open set, which contradicts the continuity of the inverse of $X$.
+The first set (call it $S_1$) is not a regular surface. Consider the point $p = (1, 0) in S_1$. Suppose $V$ is an open neighborhood around $p$. Then $V sect S_1$ is closed, because $p in V sect S_1$ but any neighborhood of $p$ contains points not in $S_1$, so no neighborhood is contained in $V sect S_1$. For any choice of open set $U subset.eq RR^2$, there does not exist a homeomorphism $X: U -> V sect S_1$, because then $X(U) = V sect S_1$, so $X$ maps an open set to a non-open set, which contradicts the continuity of the inverse of $X$. *TODO*
 
 The second set, $S_2$, is a regular surface. Let $U = {(x, y) mid(|) x^2 + y^2 < 1} subset.eq RR^2$ be the open unit disk. Define the smooth function $f: U -> RR$ by $f(x, y) = 0$. Clearly, $S_2 = {(x, y, f(x, y)) mid(|) (x, y) in U}$. By the Graph Theorem, then, $S_2$ is a regular surface.
 
@@ -136,6 +136,9 @@ we know that $u'$ and $v'$ must be the roots of the quadratic. Moreover, $u' > v
 Straight from the definition, we have that the column vectors of $d X_q$ are $diff X slash diff u$ and $diff X slash diff v$. The differential is injective iff its columns are linearly independent. Since there are only two columns, this happens iff the columns $diff X slash diff u$ and $diff X slash diff v$ are nonzero and non-parallel. But that is true iff their cross product is nonzero.
 
 = 2-2-10
+
+Suppose $S$ is a regular surface. Let $p$ be a point on the line $L$ where the "surface" crosses itself. There is an open neighborhood $V subset.eq RR^3$ containing $p$, an open set $U subset.eq RR^2$, and a map $X: U -> V sect S$ such that, in particular, $X$ is a homeomorphism.
+Let $V'$ be an open neighborhood of $p$ contained in $V$ and small enough not to contain the ends of the figure eight. The preimage of $L sect V'$ under $X$ must be a continuous curve in the preimage of $V' sect S$. Removing this curve from the preimage of $V' sect S$ can at most divide the set into two connected components. In contrast, removing $L sect V'$ from $V' sect S$ must result in four connected components (the four "legs" of the X-shape by by the crossing). Thus, these sets cannot be homeomorphic. Consequently, $U$ cannot be homeomorphic to $V sect S$, a contradiction.
 
 = Additional \#1
 
