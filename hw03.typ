@@ -132,3 +132,27 @@ we know that $u'$ and $v'$ must be the roots of the quadratic. Moreover, $u' > v
 Straight from the definition, we have that the column vectors of $d X_q$ are $diff X slash diff u$ and $diff X slash diff v$. The differential is injective iff its columns are linearly independent. Since there are only two columns, this happens iff the columns $diff X slash diff u$ and $diff X slash diff v$ are nonzero and non-parallel. But that is true iff their cross product is nonzero.
 
 = 2-2-10
+
+= Additional \#1
+
+1. Suppose $x = (x_1, ..., x_n) in RR^n$. Let $y = (y_1, dots, y_m) = T x in RR^m$. Then
+  $
+    d T_x = mat(
+      (diff y_1)/(diff x_1), ..., (diff y_1)/(diff x_n);
+      dots.v, dots.down, dots.v;
+      (diff y_m)/(diff x_1), ..., (diff y_m)/(diff x_n)
+    )
+  $
+  Therefore, we want to show that $diff y_j slash diff x_i = T_(j i)$ for $i in {1, ..., n}$ and $j in {1, ..., m}$. Suppose $i$ and $j$ are such. We have
+  $
+    y_j
+      = (T x)_j
+      = [T (x_1 e_1 + dots.c + x_n e_n)]_j
+      = (x_1 T e_1 + dots.c + x_n T e_n)_j
+      = x_1 (T e_1)_j + dots.c + x_n (T e_n)_j
+  $
+  So $diff y_j slash diff x_i = (T e_i)_j = T_(j i)$.
+
+2. Yes. Let $x = 0 in R^n$. Then we have $d T_x = T$, so $T$ is given by a matrix, and thus $T$ is a linear map.
+
+= Additional \#2
