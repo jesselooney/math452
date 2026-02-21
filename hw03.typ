@@ -94,6 +94,10 @@ The second set, $S_2$, is a regular surface. Let $U = {(x, y) mid(|) x^2 + y^2 <
 
 = 2-2-3
 
+Denote the cone by $S$. Suppose $S$ is a regular surface. Consider the point $p = (0, 0, 0) in S$. There is an open neighborhood $V subset.eq RR^3$ containing $p$, an open set $U subset.eq RR^2$, and a map $X: U -> V sect S$ such that, in particular, $X$ is a homeomorphism. By a proposition from class, the induced map $accent(X, ~): U without {X^(-1)(p)} -> V sect S without {p}$ is a homeomorphism. But $V sect S without {p}$ is disconnected ($z$-values must change sign within the set but are never zero because we removed $p$). In contrast, $U without {X^(-1)(p)}$ must be connected because removing a single point from an open set in $RR^2$ cannot disconnect it (because some open interval around the point is contained in the set and can be used to go around the missing point). This contradicts that the two sets are homeomorphic. Hence, $S$ is not a regular surface.
+
+#pagebreak()
+
 = 2-2-5
 
 Yes. We consider $X$ as $X: U -> P$. Clearly, $X$ is smooth. Moreover, at any point $q = (u, v) in U$, we have
