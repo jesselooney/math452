@@ -28,3 +28,23 @@ $
 At $p = (0, 0, 0)$, the differential $d f_p$ is zero, so it is not surjective. Thus $p$ is a critical point of $f$, so $f(p) = 0$ is a critical value.
 
 = 2-2-7
+
+1. At any point $p = (x, y, z) in RR^3$, we have
+  $
+    d f_p = 2 mat(x + y + z - 1, x + y + z - 1, x + y + z - 1)
+  $
+  This matrix is not surjective exactly when all of its elements are zero. Thus $p$ is a critical point of $f$ exactly it lies in the plane $x + y + z - 1 = 0$. The image of this set under $f$ is simply ${0}$, so $0$ is the only critical value of $f$.
+
+2. From (a), any $c != 0$ is a regular value of $f$. By the Inverse Function Theorem, $f^(-1)(c)$ is a regular surface in this case. Also, $f^(-1)(0)$ is the plane $x + y + z - 1 = 0$, which is a regular surface. Therefore, $f^(-1)(c)$ is a regular surface for all $c in RR$.
+
+3. At any point $p = (x, y, z) in RR^3$, we have
+  $
+    d f_p = mat(y z^2, x z^2, 2 x y z)
+  $
+  This matrix is not surjective exactly when all of its elements are zero. Thus $p$ is a critical point of $f$ exactly when $p in {(x, y, z) mid(|) (x, y, z) in RR^3 and (x = y = 0 or z = 0)}$. Denote that set, the union of the $x y$-plane and the $z$-axis, by $S$. The image of $S$ under $f$ is clearly ${0}$, so the only critical value of $f$ is $0$.
+
+  For any $c != 0$, $c$ is a regular value of $f$, so $f^(-1)(c)$ is a regular surface by the Inverse Function Theorem. We will show these are the only values of $c$ for which this is the case by showing $f^(-1)(0)$ is not a regular surface.
+
+  *TODO*
+  ($f^(-1)(0)$ is the union of the $x y$, $y z$, and $x z$ planes.)
+
