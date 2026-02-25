@@ -91,4 +91,6 @@ Hence, $d Y_r$ is injective. Therefore, $R = T(S)$ is a regular surface.
 
 = Additional \#3
 
+One of my favorite regular surfaces is the open unit square translated to height $pi$. It is one of my favorites because squares have a beautiful simplicity and this one is located at height $pi$, which is a nice number. Oh and also it happens to be the graph of the differentiable function $f(x,y) = pi$ over the open unit square, so it is immediately a regular surface by the Graph Theorem. See the figure on the next page for a sketch.
 
+*TODO* attach figure
