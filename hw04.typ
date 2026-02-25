@@ -49,3 +49,22 @@ At $p = (0, 0, 0)$, the differential $d f_p$ is zero, so it is not surjective. T
 
 = 2-2-17
 
+= Additional \#1
+
+1.
+  $
+    d f = mat(2 x, 2 y) wide d f_((1,0)) = mat(2, 0)
+  $
+2.
+  $
+    d f = mat(2 x, 2 y, 2 z) wide d f_((1,1,1)) = mat(2, 2, 2)
+  $
+3.
+  $
+    d f = mat(2 x, 0; 0, 2 y) wide d f_((1,2)) = mat(2, 0; 0, 4)
+  $
+4.
+  $
+    d f = mat(-r sin theta, cos theta; r cos theta, sin theta; 0, 1)
+      wide d f_((pi slash 4, 1)) = mat(-1 / sqrt(2), 1 / sqrt(2); 1 / sqrt(2), 1 / sqrt(2); 0, 1)
+  $
