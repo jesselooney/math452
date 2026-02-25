@@ -68,3 +68,27 @@ At $p = (0, 0, 0)$, the differential $d f_p$ is zero, so it is not surjective. T
     d f = mat(-r sin theta, cos theta; r cos theta, sin theta; 0, 1)
       wide d f_((pi slash 4, 1)) = mat(-1 / sqrt(2), 1 / sqrt(2); 1 / sqrt(2), 1 / sqrt(2); 0, 1)
   $
+
+= Additional \#2
+
+Suppose $S$ is a regular surface and $T$ is a rigid motion. Write $T(u) = rho u + a$ where $rho: RR^3 -> RR^3$ is an orthogonal transformation with positive determinant and $a in RR^3$. Since $T$ is linear, $T$ is $C^infinity$. Moreover, $T$ is invertible with a linear inverse (wich must itself by $C^infinity$), so $T$ is homeomorphic.
+
+Let $R = T(S)$ and suppose $p in R$. Let $q = T^(-1)(p) in S$. There exists a local parametrization $X: U -> V sect S$ of the surface, where $U subset.eq RR^2$ is open and $V subset.eq RR^3$ is a neighborhood around $q$. Since $T$ is injective, we have $T(V sect S) = T(V) sect T(S)$. Let $W = T(V)$, which is an open set containing $p$. Intuitively, $W$ should still be a neighborhood, since $T$ is a rigid motion, but regardless we could choose some open ball around $p in T(V)$ and replace $V$ and $U$ by the appropriate preimages to preserve bijectivity in this argument. Without loss of generality, we assume $W$ is a neighborhood around $p$. Now define $Y: U -> W sect R$ by $Y = T compose X$. We prove that $Y$ is a local parametrization of $R$.
+
+Since $T$ and $X$ are $C^infinity$, $Y$ is $C^infinity$ by the Chain Rule. Since $T$ and $X$ are homeomorphic, their composition $Y$ (with appropriately set codomain) is clearly homeomorphic. Lastly, let $r = Y^(-1)(p) in U$. Since $Y(u,v) = rho X(u,v) + a$, we have
+$
+  d Y_r = mat(Y_u (r), Y_v (r)) = [rho X_u (r), rho X_v (r)]
+$
+where we represent the matrix by its column vectors. Since $r = X^(-1)(q)$, we have that
+$
+  d X_r = mat(X_u (r), X_v (r))
+$
+is injective, so $X_u (r)$ and $X_v (r)$ are linearly independent. Since $rho$ is invertible, that means $Y_u (r)$ and $Y_v (r)$ are linearly independent, because
+$
+  b Y_u (r) + c Y_v (r) = 0 ==> b rho X_u (r) + c rho X_v (r) = 0 ==> b X_u (r) + c X_v (r) = 0
+$
+Hence, $d Y_r$ is injective. Therefore, $R = T(S)$ is a regular surface.
+
+= Additional \#3
+
+
