@@ -45,6 +45,7 @@ At $p = (0, 0, 0)$, the differential $d f_p$ is zero, so it is not surjective. T
 
   For any $c != 0$, $c$ is a regular value of $f$, so $f^(-1)(c)$ is a regular surface by the Inverse Function Theorem. We will show these are the only values of $c$ for which this is the case by showing $f^(-1)(0)$ is not a regular surface.
 
-  *TODO*
-  ($f^(-1)(0)$ is the union of the $x y$, $y z$, and $x z$ planes.)
+  Note that $f^(-1)(0)$ is the union of the $x y$-, $y z$-, and $x z$-planes. In particular, the set contains the $x$-, $y$-, and $z$-axes, considered as curves. Each passes through the origin, where their tangents are mutually orthogonal. Suppose $f^(-1)(0)$ is a regular surface. Then the tangent plane to the surface at the origin contains at least three orthogonal vectors. We know the tangent plane is the image $RR^2$ under the differential of some parametrization of the surface at the origin. In particular, it is a two-dimensional vector space (because the differential is linear). Hence, it cannot contain three orthogonal vectors, a contradiction.
+
+= 2-2-17
 
