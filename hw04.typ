@@ -106,7 +106,19 @@ Also, in this problem, we use the following notation in a few places. If $A = {(
 
 #pagebreak()
 
-3. We prove that 
+3. We first prove that every regular plane curve is locally the graph of a smooth function. Suppose $C$ is a regular plane curve and suppose $p in C$. Then there exists a neighborhood $W$ of $p$ in $C$ such that $W$ is the graph of a smooth function of the form $y = f(x)$ or $x = g(y)$.
+
+  _Proof:_ Since $C$ is a regular plane curve and $p in C$, there exists an open set $U subset.eq RR$, a neighborhood $V subset.eq RR^2$ of $p$, and a parametrization $X: U -> V sect C$ satisfying certain properties. Write $X(t) = (x(t), y(t))$. The differential of $X$ at is injective at $q = X^(-1)(p)$, so at least one of $x_t$ or $y_t$ is nonzero at $q$.
+  
+  Suppose $x_t != 0$. Then define the projection $pi: RR^2 -> RR$ by $pi(x, y) = x$. Composing with $X$ gives $(pi compose X)(t) = x(t)$, so the differential of $pi compose X$ is $[x_t]$, which is invertible at $q$ since $x_t != 0$ there. By the Inverse Function Theorem, there exist neighborhoods $V' subset.eq RR$ of $q$ and $W' subset.eq RR^2$ of $(pi compose X)(q)$ such that $pi compose X$ maps $V'$ diffeomorphically onto $W'$. Let $W = X(V')$, which is a neighborhood of $p$ in $C$ since $X$ is a homeomorphism. Since $pi compose X$ and $X$ are invertible, $pi$ must be invertible with $pi^(-1) = X compose (pi compose X)^(-1)$, which must be smooth because $X$ and $(pi compose X)^(-1)$ are. Write $pi^(-1)(x) = (x, f(x))$. Now
+  $
+    W = X(V') = X((pi compose X)^(-1)(W')) = pi^(-1)(W') = {(x, f(x)) | x in W'}
+  $
+  so $W$ is the graph of a smooth function $y = f(x)$. We can do the analogous process for $x = g(y)$ when $y_t != 0$ instead.
+
+  With that result proven, we show that $C$ is not a regular curve. Suppose $C$ is a regular curve. By the theorem just proven, since $p = (0,0) in C$, $C$ must be the graph of a differentiable function in some neighborhood of $p$. But the projection of $C$ onto the $y$-axis is not injective in any neighborhood of $p$. So we must have that $C$ is the graph of $y(x)$ for some differentiable function $y$ in a neighborhood of $p$. That function must (locally) be $y(x) = x^(2 slash 3)$, which is not differentiable at $x = 0$. This is a contradiction, so $C$ is not a regular curve.
+
+#pagebreak()
 
 = Additional \#1
 
@@ -151,5 +163,3 @@ Hence, $d Y_r$ is injective. Therefore, $R = T(S)$ is a regular surface.
 = Additional \#3
 
 One of my favorite regular surfaces is the open unit square translated to height $pi$. It is one of my favorites because squares have a beautiful simplicity and this one is located at height $pi$, which is a nice number. Oh and also it happens to be the graph of the differentiable function $f(x,y) = pi$ over the open unit square, so it is immediately a regular surface by the Graph Theorem. See the figure on the next page for a sketch.
-
-*TODO* attach figure
