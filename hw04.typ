@@ -47,7 +47,66 @@ At $p = (0, 0, 0)$, the differential $d f_p$ is zero, so it is not surjective. T
 
   Note that $f^(-1)(0)$ is the union of the $x y$-, $y z$-, and $x z$-planes. In particular, the set contains the $x$-, $y$-, and $z$-axes, considered as curves. Each passes through the origin, where their tangents are mutually orthogonal. Suppose $f^(-1)(0)$ is a regular surface. Then the tangent plane to the surface at the origin contains at least three orthogonal vectors. We know the tangent plane is the image $RR^2$ under the differential of some parametrization of the surface at the origin. In particular, it is a two-dimensional vector space (because the differential is linear). Hence, it cannot contain three orthogonal vectors, a contradiction.
 
+#pagebreak()
+
 = 2-2-17
+
+We first prove the Graph Theorem for regular curves: Suppose $f: U -> RR$ and $g: U -> RR$ are smooth functions on an open set $U subset.eq RR$. Then $C = {(t, f(t), g(t)) | t in U}$ is a regular curve.
+
+_Proof:_ Define $X: U -> C$ by $X(t) = (t, f(t), g(t))$. Since $f$ and $g$ are smooth, so is $X$. Moveover, there is clearly an inverse $X^(-1)(x, y, z) = x$, which is a projection and thus continuous. Finally, the differential is
+$
+  d X = mat(1; f_t; g_t)
+$
+which is clearly injective because of the constant $1$. Hence, $X$ is a parametrization of $C$, so $C$ is a regular curve.
+
+Also, in this problem, we use the following notation in a few places. If $A = {(x_1, ..., x_n)}$ is a subset of $RR^n$, then $A_(x_i) = {x_i | (x_1, ..., x_i, ..., x_n) in A}$.
+
+1. Suppose $U in RR^2$ is an open set and $f: U -> RR$ is a smooth function with a regular value $a in f(U)$. Suppose $p in f^(-1)(a)$. Since $a$ is a regular value of $f$, at most one of $f_x (p)$ and $f_y (p)$ can be zero. Assume without loss of generality that $f_y (p) != 0$. Define $F: U -> RR^2$ by $F(x, y) = (x, f(x, y))$. We have
+  $
+    d F_p = mat(1, 0; f_x (p), f_y (p))
+  $
+  so $det d F_p = f_y (p) != 0$. Thus, by the Inverse Function Theorem, there exist neighborhoods $V subset.eq U$ of $p$ and $W subset.eq F(U)$ of $F(p)$ such that $F: V -> W$ has a differentiable inverse. Write $F^(-1)(x, y) = (x, beta(x, y))$ and define $beta_1(x) = beta(x, a)$. Now
+  $
+    F(V sect f^(-1)(a)) = W sect {(x, a) | x in f^(-1)(a)_x}
+  $
+  Therefore,
+  $
+    V sect f^(-1)(a) = F^(-1)(W sect {(x, a) | x in f^(-1)(a)_x}) = {(x, beta_1(x)) | x in W_x sect f^(-1)(a)_x}
+  $
+  so $V sect f^(-1)(a)$ is the graph of the differentiable function $beta_1$. By the Graph Theorem for Regular Curves (with $g = 0$), $V sect f^(-1)(a)$ is a regular curve. Therefore, we have a system of local coordinates near $p$ for every $p in f^(-1)(a)$, so $f^(-1)(a)$ is a regular curve.
+
+  An example of such a curve that is not connected is the hyperbola $x^2 - y^2 = 1$, because $1$ is a regular value of $x^2 - y^2$ ($2 x$ and $2 y$ cannot both be zero when $x^2 - y^2 = 1$).
+
+#pagebreak()
+
+2. Suppose $U subset.eq RR^3$ is an open set and $f: U -> RR^2$ is a smooth function with a regular value $(a, b) in f(U)$. Write $f(x, y, z) = (g(x, y, z), h(x, y, z))$. Suppose $p in f^(-1)(a,b)$. Since $(a, b)$ is a regular value of $f$, the differential
+  $
+    d f = mat(g_x, g_y, g_z; h_x, h_y, h_z)
+  $
+  is surjective at $p$. This requires that its rank is $dim RR^2 = 2$, so two of its columns must be linearly independent. Without loss of generality (by renaming axes), assume that the latter two columns are linearly independent. Define $F: U -> RR^3$ by $F(x,y,z) = (x, g(x,y,z), h(x,y,z))$, which has differential
+  $
+    d F = mat(1, 0, 0; g_x, g_y, g_z; h_x, h_y, h_z)
+  $
+  with
+  $
+    det d F = det mat(g_y, g_z; h_y, h_z)
+  $
+  so the determinant is not zero at $p$ because the submatrix is invertible (due to linearly independent columns) there. Therefore, by the Inverse Function Theorem, there exist neighborhoods $V subset.eq U$ of $p$ and $W subset.eq F(U)$ of $F(p)$ such that $F: V -> W$ has a differentiable inverse. Write $F^(-1)(x,y,z) = (x, beta(x,y,z), gamma(x,y,z))$. Define $beta_1 (x) = beta(x, a, b)$ and $gamma_1 (x) = gamma(x, a, b)$. Now
+  $
+    F(V sect f^(-1)(a,b)) = W sect {(x, a, b) | x in f^(-1)(a,b)_x}
+  $
+  Therefore,
+  $
+    V sect f^(-1)(a,b) &= F^(-1)(W sect {(x, a, b) | x in f^(-1)(a,b)_x}) \
+    &= {(x, beta_1 (x), gamma_1 (x)) | x in W_x sect f^(-1)(a,b)_x}
+  $
+  so $V sect f^(-1)(a,b)$ is the graph of the differentiable functions $beta_1$ and $gamma_1$. By the Graph Theorem for Regular Curves, $V sect f^(-1)(a,b)$ is a regular curve. As above, we can conlude that $f^(-1)(a,b)$ is a regular curve.
+
+  Note that $f(x,y,z) = (a, b)$ precisely when $g(x,y,z) = a$ and $h(x,y,z) = b$. We know $a$ and $b$ are regular values of their respective functions (or else at least one of the rows of $d f$ would be zero at $p$, making it not surjective), so $g=a$ and $h=b$ define regular surfaces, and $f = (a,b)$ consists of the points in their intersection. So the kind of curve in this problem is always the intersection of two surfaces.
+
+#pagebreak()
+
+3. We prove that 
 
 = Additional \#1
 
