@@ -49,3 +49,8 @@ so $g(x,y,z) in S_1$. Moreover, because the scalars are nonzero, $f$ and $g$ are
 = 2-4-2
 
 = 2-4-3
+
+= Additional \#1
+
+= Additional \#2
+
