@@ -29,6 +29,12 @@ Yes. Consider the extension of $pi$ to all of $RR^3$, $pi': RR^3 -> RR^2$ given 
 
 = 2-3-4
 
+Let $S_1 = {(x,y,z) mid(|) x^2 + y^2 + z^2 = 1}$ and
+$
+  S_2 = {(x,y,z) mid(|) x^2/a^2 + y^2/b^2 + z^2/c^2 = 1}
+$
+where $a,b,c$ are nonzero scalar constants. Define $f: S_1 -> S_2$ by $f(x,y,z) = (a x, b y, c z)$, which is clearly differentiable. Moreover, because the scalars are nonzero, there is clearly an inverse $f^(-1): S_2 -> S_1$ given by $f^(-1)(x,y,z) = (x slash a, y slash b, z slash c)$, which is also differentiable. Therefore, $f$ is a diffeomorphism between the two surfaces.
+
 = 2-4-1
 
 = 2-4-2
