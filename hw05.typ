@@ -33,7 +33,16 @@ Let $S_1 = {(x,y,z) mid(|) x^2 + y^2 + z^2 = 1}$ and
 $
   S_2 = {(x,y,z) mid(|) x^2/a^2 + y^2/b^2 + z^2/c^2 = 1}
 $
-where $a,b,c$ are nonzero scalar constants. Define $f: S_1 -> S_2$ by $f(x,y,z) = (a x, b y, c z)$, which is clearly differentiable. Moreover, because the scalars are nonzero, there is clearly an inverse $f^(-1): S_2 -> S_1$ given by $f^(-1)(x,y,z) = (x slash a, y slash b, z slash c)$, which is also differentiable. Therefore, $f$ is a diffeomorphism between the two surfaces.
+where $a,b,c$ are nonzero scalar constants. Define $f: S_1 -> S_2$ by $f(x,y,z) = (a x, b y, c z)$. The codomain is correct here because if $(x,y,z) in S_1$, then $x^2 + y^2 + z^2 = 1$, so
+$
+  (a x)^2/a^2 + (b y)^2/b^2 + (c z)^2/c^2 = 1
+$
+and thus $f(x,y,z) in S_2$. Define $g: S_2 -> S_1$ by $g(x,y,z) = (x slash a, y slash b, z slash c)$. The codomain is correct here because if $(x,y,z) in S_2$, then
+$
+  x^2/a^2 + y^2/b^2 + z^2/c^2 = 1 \
+  (x/a)^2 + (y/b)^2 + (z/c)^2 = 1
+$
+so $g(x,y,z) in S_1$. Moreover, because the scalars are nonzero, $f$ and $g$ are clearly inverses, and both functions are clearly differentiable. Therefore, $f$ is a diffeomorphism between the two surfaces.
 
 = 2-4-1
 
