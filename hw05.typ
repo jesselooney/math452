@@ -54,15 +54,58 @@ In particular, at $t = 0$ we have $gradient f(p) dot w = 0$. Since $p$ is a regu
 
 = 2-4-2
 
-Consider the point $(u, v, 0)$ on the surface. The surface is the preimage of 1 under $f(x,y,z) = x^2 + y^2 - z^2$, which has differential $[2x 2y -2z]$. In that preimage, not all of $x,y,z$ can be zero, so the differential is surjective. Hence, 1 is a regular value of $f$. Therefore, the result from Exercise 2-4-1 applies, and says that the tangent plane at the indicated point is
+Consider the point $(u, v, 0)$ on the surface. The surface is the preimage of 1 under $f(x,y,z) = x^2 + y^2 - z^2$, which has differential $[2x quad 2y quad -2z]$. In that preimage, not all of $x,y,z$ can be zero, so the differential is surjective. Hence, 1 is a regular value of $f$. Therefore, the result from Exercise 2-4-1 applies, and says that the tangent plane at the indicated point is
 $
   2u (x - u) + 2v (y - v) = 0
 $
-The normal vector $[2u 2v 0]$ is orthogonal to $[0 0 z]$ for any $z$, so the tangent plane is parallel to the $z$ axis.
+The normal vector $[2u quad 2v quad 0]$ is orthogonal to $[0 quad 0 quad z]$ for any $z$, so the tangent plane is parallel to the $z$ axis.
 
 = 2-4-3
 
+Let $g(x,y,z) = f(x,y) - z$, with differential $d g = [f_x quad f_y quad -1]$ which is everywhere surjective (hence all values of $g$ are regular values). Now the surface is the inverse image under $g$ of the regular value 0, so the tangent plane at $p_0$ is
+$
+  f_x (p_0) (x - x_0) + f_y (p_0) (y - y_0) - (z - f(p_0)) = 0
+$
+which reduces to the desired equation. The differential of $f$ at $p$ is $d f_p_0 = [f_x (p_0) quad f_y (p_0)]$. Hence $d f_p_0 (x, y) = f_x (p_0) x + f_y (p_0) y$. Therefore, if $(x, y, d f_p_0 (x,y))$ is a point on the graph of $d f_p_0$ *TODO*
 = Additional \#1
 
+1. Suppose $A,B,X,Y in #[Mat] (n, RR)$ and $lambda, mu in RR$. Then
+  $
+    [A + lambda X, B + mu Y]
+      &= (A + lambda X) (B + mu Y) - (B + mu Y) (A + lambda X) \
+      &= A B + mu A Y + lambda X B + lambda mu X Y - B A - lambda B X - mu Y A - lambda mu Y X \
+      &= (A B - B A) + mu (A Y - Y A) + lambda (X B - B X) + lambda mu (X Y - Y X) \
+      &= [A, B] + mu [A, Y] + lambda [X, B] + lambda mu [X, Y] \
+  $
+  Setting $lambda = 0$ or $mu = 0$ shows the linearity in each argument, so $[,]$ is a $(2, 1)$ tensor. Moreover,
+  $
+    [A, B] = A B - B A = - (B A - A B) = - [B, A]
+  $
+  so $[,]$ is antisymmetric.
+
+2. Suppose $A,B,C in #[Mat] (n, RR)$. Then
+  $
+    [A, [B, C]] + [C, [A, B]] + [B, [C, A]]
+      &= A[B,C] - [B,C]A + C[A,B] - [A,B]C + B[C,A] - [C,A]B \
+      &= A B C - A C B + C B A - B C A \
+      &+ C A B - C B A + B A C - A B C \
+      &+ B C A - B A C + A C B - C A B \
+      &= 0
+  $
+
 = Additional \#2
+
+Since $B$ is a symmetric tensor, we have
+$
+  q_B (x+y)
+    &= B(x+y,x+y) \
+    &= B(x,x) + B(x,y) + B(y,x) + B(y,y) \
+    &= B(x,x) + 2 B(x,y) + B(y,y) \
+    &= q_B (x) + 2 B(x,y) + q_B (y) \
+$
+so 
+$
+  q_B (x+y) - q_B (x) + q_B (y) = 2 B(x,y)
+$
+and the result follows.
 
