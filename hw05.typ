@@ -19,6 +19,12 @@
 
 #set math.mat(delim: "[")
 
+Suppose $f: W -> RR^3$ is differentiable at $p in W$ where $W subset.eq RR^3$ is open. Suppose $S subset.eq RR^3$ is a regular surface with $p in S$ and let $V = W sect S$. Then $f: V -> RR^3$ is differentiable at $p in V$. If $f$ is smooth and $f(V) subset.eq T$ for some regular surface $T$, then $f: V -> T$ is differentiable at $p$ as a map between surfaces.
+
+Proof: Let $X: U -> V$ be a parametrization of $S$ such that $p in X(U) subset.eq V$. Let $q = X^(-1)(p)$. We have that $X$ is differentiable at $q$. Moreover, we have that $f: W -> RR^3$ is differentiable at $p = X(q) in W$. By the Chain Rule, then, $f compose X: U -> RR^3$ is differentiable at $q$.
+
+Now suppose additionally that $f: W -> RR^3$ is smooth. Let $Y: U' -> V'$ be a parametrization of $T$ such that $f(p) in V'$. Without loss of generality assume $f(X(U)) subset.eq V'$ (we could restrict the domain of $X$ to $X^(-1)(f^(-1)(V'))$. *TODO: finish the proof. f should be a homeomorphism for this to work*.
+
 = 2-3-1
 
 Clearly, $A^(-1) = A$. Also, $A$ is clearly differentiable (so $A^(-1) = A$ is too). Therefore, $A$ is a diffeomorphism.
@@ -66,7 +72,19 @@ Let $g(x,y,z) = f(x,y) - z$, with differential $d g = [f_x quad f_y quad -1]$ wh
 $
   f_x (p_0) (x - x_0) + f_y (p_0) (y - y_0) - (z - f(p_0)) = 0
 $
-which reduces to the desired equation. The differential of $f$ at $p$ is $d f_p_0 = [f_x (p_0) quad f_y (p_0)]$. Hence $d f_p_0 (x, y) = f_x (p_0) x + f_y (p_0) y$. Therefore, if $(x, y, d f_p_0 (x,y))$ is a point on the graph of $d f_p_0$ *TODO*
+which reduces to the desired equation.
+
+The differential of $f$ at $p$ is $d f_p_0 = [f_x (p_0) quad f_y (p_0)]$. Hence $d f_p_0 (x, y) = f_x (p_0) x + f_y (p_0) y$. Therefore, if $(x, y, d f_p_0 (x,y))$ is a point on the graph of $d f_p_0$, then (considering the point as a vector) it lies in the tangent plane since
+  $
+    f_x x + f_y y - d f_p_0 (x,y) = 0
+  $
+  Conversely, if $(x,y,z)$ is a vector in the tangent plane, we have
+  $
+    f_x x + f_y y - z = 0
+  $
+  so $z = d f_p_0 (x,y)$ and the vector is a point on the graph of $d f_p_0$.
+
+
 = Additional \#1
 
 1. Suppose $A,B,X,Y in #[Mat] (n, RR)$ and $lambda, mu in RR$. Then
