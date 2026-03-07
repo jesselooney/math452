@@ -46,6 +46,12 @@ so $g(x,y,z) in S_1$. Moreover, because the scalars are nonzero, $f$ and $g$ are
 
 = 2-4-1
 
+The result will be true so long as $gradient f dot w$ is orthogonal to all nonzero vectors $w$ in the tangent plane. Suppose $w$ is such a vector, denote the surface by $S$, and let $p = (x_0, y_0, z_0)$. Then there exists a curve $alpha: (-epsilon, epsilon) -> S$ such that $alpha(0) = p$ and $alpha'(0) = w$. Write $alpha(t) = (x(t), y(t), z(t))$, and consider the composition $f compose alpha$, which must be identically zero since the trace of $alpha$ lies on $S$. By the Chain Rule,
+$
+  0 = d/(d t) (f compose alpha) = f_x x' + f_y y' + f_z z' = gradient f dot alpha'
+$
+In particular, at $t = 0$ we have $gradient f(p) dot w = 0$. Since $p$ is a regular point of $f$, the differential $gradient f(p)$ at $p$ must be surjective and hence nonzero in this case, so the vectors are indeed orthogonal.
+
 = 2-4-2
 
 = 2-4-3
