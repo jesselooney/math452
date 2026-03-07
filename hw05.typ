@@ -19,19 +19,25 @@
 
 #set math.mat(delim: "[")
 
-Suppose $f: W -> RR^3$ is differentiable at $p in W$ where $W subset.eq RR^3$ is open. Suppose $S subset.eq RR^3$ is a regular surface with $p in S$ and let $V = W sect S$. Then $f: V -> RR^3$ is differentiable at $p in V$. If $f$ is smooth and $f(V) subset.eq T$ for some regular surface $T$, then $f: V -> T$ is differentiable at $p$ as a map between surfaces.
+We implicitly use the following Proposition to justify that differentiable functions are still differentiable when restricted to surfaces (under appropriate conditions).
 
-Proof: Let $X: U -> V$ be a parametrization of $S$ such that $p in X(U) subset.eq V$. Let $q = X^(-1)(p)$. We have that $X$ is differentiable at $q$. Moreover, we have that $f: W -> RR^3$ is differentiable at $p = X(q) in W$. By the Chain Rule, then, $f compose X: U -> RR^3$ is differentiable at $q$.
+*Proposition:* Suppose $f: W -> RR^3$ is differentiable at $q in W$ where $W subset.eq RR^3$ is open. Suppose $S_1 subset.eq RR^3$ is a regular surface with $q in S_1$ and let $V_1 = W sect S_1$. Then $f: V_1 -> RR^3$ is differentiable at $q in V_1$. Moreover, if $f$ is smooth and $d f_q$ is an isomorphism and $f(V_1) subset.eq S_2$ for some regular surface $S_2$, then $f: V_1 -> S_2$ is differentiable at $q$ as a map between surfaces.
 
-Now suppose additionally that $f: W -> RR^3$ is smooth. Let $Y: U' -> V'$ be a parametrization of $T$ such that $f(p) in V'$. Without loss of generality assume $f(X(U)) subset.eq V'$ (we could restrict the domain of $X$ to $X^(-1)(f^(-1)(V'))$. *TODO: finish the proof. f should be a homeomorphism for this to work*.
+_Proof:_ Let $X: U_1 -> V_1$ be a parametrization of $S_1$ such that $q in X(U_1) subset.eq V_1$. Let $p = X^(-1)(q)$. We have that $X$ is differentiable at $p$. Moreover, we have that $f: W -> RR^3$ is differentiable at $q = X(p) in W$. By the Chain Rule, then, $f compose X: U_1 -> RR^3$ is differentiable at $p$. This says that $f: V_1 -> RR^3$ is differentiable at $q in V_1$.
+
+Now suppose additionally that $f: W -> RR^3$ is smooth and $d f_q$ is an isomorphism. Let $r = f(q) in S_2$. Let $Y: U_2 -> V_2$ be a parametrization of $S_2$ such that $r in V_2$. Since $d f_p$ is an isomorphism, the Inverse Function Theorem guarantees that there exist open sets $U subset.eq W$ and $V subset.eq RR^3$ such that $f(p) in V$ and $f: U -> V$ is a diffeomorphism (implicitly, $f(U) = V$). Let $V'_2 = V_2 sect V$ be an open set on $S_2$. We can redo the first part of this proof with $f$ restricted to the open set $f^(-1)(V'_2)$ in order to get $X: U'_1 -> V'_1$ where $V'_1 subset.eq f^(-1)(V'_2)$ such that $f compose X: U'_1 -> V'_2$ is differentiable at $p$. Since $U'_2 = Y^(-1)(V'_2)$ is open, we can restrict $Y$ to be $Y: U'_2 -> V'_2$, with inverse $Y^(-1): V'_2 -> U'_2$. Now we can compose $Y^(-1)$ with $f compose X$.
+
+We can see that $f compose X$ is a parametrization of $S_2$ near $r$. This is because $f compose X$ is $C^infinity$ by virtue of being a composition of such functions. Moreover, $d(f compose X)_p = (d f_q) (d X_p)$ by the chain rule. Both differentials are injective at the appropriate points (by hypothesis for $f$ and definition for $X$). Since $S_2$ is a regular surface, we need not prove condition 2 (by a proposition from the book). Another proposition from the book says that $Y$ is locally a diffeomorphism, so $Y^(-1)$ is differentiable (on $S_2$). By definition, then the composition with a particular parametrization $Y^(-1) compose f compose X$ must be differentiable in the usual sense. This says that $f$ is differentiable at $q$ when considered as a map between surfaces.
 
 = 2-3-1
 
-Clearly, $A^(-1) = A$. Also, $A$ is clearly differentiable (so $A^(-1) = A$ is too). Therefore, $A$ is a diffeomorphism.
+Clearly, $A^(-1) = A$. Also, $A$ is clearly smooth (so $A^(-1) = A$ is too) with an isomorphic differential. Therefore, $A$ is a diffeomorphism.
 
 = 2-3-2
 
 Yes. Consider the extension of $pi$ to all of $RR^3$, $pi': RR^3 -> RR^2$ given by $(x,y,z) |-> (x,y,0)$. Being a projection, $pi'$ is linear, and thus differentiable on $RR^3$. As noted in Example 1, since $pi$ is just the restriction of a differentiable function $pi'$ to $S$, $pi$ is differentiable on $S$.
+
+#pagebreak()
 
 = 2-3-4
 
@@ -48,7 +54,9 @@ $
   x^2/a^2 + y^2/b^2 + z^2/c^2 = 1 \
   (x/a)^2 + (y/b)^2 + (z/c)^2 = 1
 $
-so $g(x,y,z) in S_1$. Moreover, because the scalars are nonzero, $f$ and $g$ are clearly inverses, and both functions are clearly differentiable. Therefore, $f$ is a diffeomorphism between the two surfaces.
+so $g(x,y,z) in S_1$. Moreover, because the scalars are nonzero, $f$ and $g$ are clearly inverses, and both functions are clearly smooth with isomorphic differentials. Therefore, $f$ is a diffeomorphism between the two surfaces.
+
+#pagebreak()
 
 = 2-4-1
 
@@ -65,6 +73,8 @@ $
   2u (x - u) + 2v (y - v) = 0
 $
 The normal vector $[2u quad 2v quad 0]$ is orthogonal to $[0 quad 0 quad z]$ for any $z$, so the tangent plane is parallel to the $z$ axis.
+
+#pagebreak()
 
 = 2-4-3
 
@@ -110,6 +120,8 @@ The differential of $f$ at $p$ is $d f_p_0 = [f_x (p_0) quad f_y (p_0)]$. Hence 
       &+ B C A - B A C + A C B - C A B \
       &= 0
   $
+
+#pagebreak()
 
 = Additional \#2
 
