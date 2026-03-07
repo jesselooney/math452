@@ -54,6 +54,12 @@ In particular, at $t = 0$ we have $gradient f(p) dot w = 0$. Since $p$ is a regu
 
 = 2-4-2
 
+Consider the point $(u, v, 0)$ on the surface. The surface is the preimage of 1 under $f(x,y,z) = x^2 + y^2 - z^2$, which has differential $[2x 2y -2z]$. In that preimage, not all of $x,y,z$ can be zero, so the differential is surjective. Hence, 1 is a regular value of $f$. Therefore, the result from Exercise 2-4-1 applies, and says that the tangent plane at the indicated point is
+$
+  2u (x - u) + 2v (y - v) = 0
+$
+The normal vector $[2u 2v 0]$ is orthogonal to $[0 0 z]$ for any $z$, so the tangent plane is parallel to the $z$ axis.
+
 = 2-4-3
 
 = Additional \#1
