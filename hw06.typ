@@ -91,3 +91,21 @@ which is symmetric. By the same reasoning as above, we can see that the eigenval
 
 = Additional \#2
 
+Consider $X: U -> RR^3$ given by $X(u, v) = (2 cos u, 2 sin u, v)$ where $U = (0, pi) times RR$. We can cover $S$ entirely with three additional rotated copies of $X$. Now, $X$ is clearly smooth, has an inverse $X^(-1)(x, y, z) = (cos^(-1)(x slash 2), z)$ (since $cos$ is injective on $(0, pi)$), and has differential
+$
+  d X = mat(-2 sin u, 0; 2 cos u, 0; 0, 1)
+$
+which is always injective since the columns are linearly independent ($sin u$ and $cos u$ are never $0$ at the same time). Therefore $X$ is a regular parametrization of $S$.
+
+We have already computed $X_u$ and $X_v$ (the columns of $d X$), so the matrix of the first fundamental form has components
+$
+  E &= 4 \
+  F &= 0 \
+  G &= 1
+$
+Therefore, the first fundamental form at $q = (0, 2, 0)$ (with preimage $X^(-1)(q) = (pi slash 2, 0)$) has matrix
+$
+  mat(4, 0; 0, 1)
+$
+
+= Additional \#3
