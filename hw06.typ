@@ -48,3 +48,18 @@ $
 
 = 2-5-5
 
+We know by the Graph Theorem that $X: U -> S$ given by $X(x,y) -> (x,y,f(x,y))$ is a parametrization of the surface. We have
+$
+  X_x &= (1, 0, f_x) \
+  X_y &= (0, 1, f_y) \
+  X_x times X_y &= (- f_x, - f_y, 1)
+$
+Also, the preimage of $R$ under $X$ is necessarily the projection $Q subset.eq U$. Therefore,
+$
+  A(R)
+    = integral.double_(X^(-1)(R)) abs(X_x times X_y) thin d x thin d y
+    = integral.double_Q sqrt(1 + f_x^2 + f_y^2) thin d x thin d y
+$
+
+= 
+
