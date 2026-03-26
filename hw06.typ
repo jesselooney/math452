@@ -61,5 +61,33 @@ $
     = integral.double_Q sqrt(1 + f_x^2 + f_y^2) thin d x thin d y
 $
 
-= 
+#pagebreak()
+
+= Additional \#1
+
+1. We can compute the matrix of the transformation directly; we must have
+$
+  P e_1 = e_1 wide P e_2 = e_2 wide P e_3 = 0
+$
+so
+$
+  P = mat(1, 0, 0; 0, 1, 0; 0, 0, 0)
+$
+which is symmetric. The above equations also give us three distinct eigenvectors of $P$: $e_1$ and $e_2$ with eigenvalue $1$ and $e_3$ with eigenvalue $0$. Since $e_1$ and $e_2$ are linearly independent, we have
+$
+  2 <= dim E_1 <= dim RR^3 - dim E_0 <= 3 - 1 = 2
+$
+so $dim E_1 = 2$ with basis ${e_1, e_2}$ and $dim E_0 = 1$ with basis ${e_3}$.
+
+2. We can do the same thing here:
+$
+  R e_1 = e_1 wide R e_2 = e_2 wide R e_3 = -e_3
+$
+so
+$
+  R = mat(1, 0, 0; 0, 1, 0; 0, 0, -1)
+$
+which is symmetric. By the same reasoning as above, we can see that the eigenvalues are $1$ and $-1$ and that $dim E_1 = 2$ with basis ${e_1, e_2}$ and $dim E_(-1) = 1$ with basis ${e_3}$.
+
+= Additional \#2
 
