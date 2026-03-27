@@ -109,3 +109,28 @@ $
 $
 
 = Additional \#3
+
+1. $tr$ is a $(1, 0)$ tensor:
+  $
+    tr(lambda A + B)
+      = sum_i (lambda A + B)_(i i)
+      = sum_i (lambda A_(i i) + B_(i i))
+      = lambda sum_i A_(i i) + sum_i B_(i i)
+      = lambda tr A + tr B
+  $
+
+2. Recalling that $(A B)_(i j) = sum_k a_(i k) b_(k j)$, we have
+  $
+    tr(A B)
+      = sum_i (A B)_(i i)
+      = sum_i sum_k a_(i k) b_(k i)
+      = sum_k sum_i b_(k i) a_(i k)
+      = sum_k (B A)_(k k)
+      = tr(B A)
+  $
+
+3. Suppose $C$ is the commutator $[A, B] = A B - B A$. Then, using (a) and then (b),
+  $
+    tr(C) = tr(A B - B A) = tr(A B) - tr(B A) = tr(A B) - tr(A B) = 0
+  $
+  so the commutator of any pair of matrices has zero trace. Since there exist matrices (such as the identity matrix) with nonzero trace, not all matrices are the commutator of two matrices.
