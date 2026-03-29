@@ -21,7 +21,13 @@
 
 = 3-2-2
 
+Suppose $p$ is a point on the curve (denoted by $alpha$). Without loss of generality, $p = alpha(0)$. Consider the curve $N(t) = N compose alpha(t)$. Since the surface is tangent to a plane along the whole curve, the normals of the surface at each point on the curve must all be equal (to the normal of the plane). Therefore, $N'(t) equiv 0$. Thus $d N_p (alpha'(0)) = N'(0) = 0$. Since $alpha'(0) != 0$, this means zero is an eigenvalue of $d N_p$, hence $K = det(d N_p) = 0$, which implies $p$ is parabolic or planar.
+
+*TODO: can we assume the curve is regular???*
+
 = 3-2-4
+
+No. One such surface $S$ is the $x y$ plane (with $k_1 = k_2 = 0$ everywhere), but we know there are planar curves with arbitrarily large curvature (circles of small radius, for instance).
 
 = 3-2-6
 
