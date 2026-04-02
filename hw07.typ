@@ -42,9 +42,9 @@ which is independent of the choice of $u$ and $v$.
 
 = 3-2-8
 
-1. 
+1. The open northern hemisphere (assuming the orientation with $N(0, 0, 0) = (0, 0, 1)$). This is because the slope of the paraboloid gets arbitrarily large so the normals get arbitrarily close to horizontal.
 
-2. 
+2. The points of the sphere with inclination angle $theta in (pi slash 4, 3 pi slash 4)$. This is because the hyperboloid has vertical sides (horizontal normals) in the $x y$ plane, and then approaches positive and negative unit slope in either direction, allowing the normals to range up to $plus.minus 45 degree$. This works for either orientation of the surface due to its symmetry.
 
 = 3-3-1
 
