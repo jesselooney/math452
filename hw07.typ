@@ -31,6 +31,15 @@ No. One such surface $S$ is the $x y$ plane (with $k_1 = k_2 = 0$ everywhere), b
 
 = 3-2-6
 
+Suppose $u, v$ are orthogonal unit vectors in $T_p S$. If $u$ makes an angle $theta_u$ with the principal direction $e_1$, then $v$ must make an angle $theta_v = theta_u plus.minus pi slash 2$. Therefore, because $cos (theta plus.minus pi slash 2) = plus.minus sin theta$ (and likewise for $sin$), the sum of their normal curvatures is
+$
+  k_n^u + k_n^v
+    &= k_1 cos^2 theta_u + k_2 sin^2 theta_u + k_1 cos^2 theta_v + k_2 sin^2 theta_v \
+    &= k_1 cos^2 theta_u + k_2 sin^2 theta_u + k_1 sin^2 theta_u + k_2 cos^2 theta_u \
+    &= k_1 + k_2
+$
+which is independent of the choice of $u$ and $v$.
+
 = 3-2-8
 
 1. 
