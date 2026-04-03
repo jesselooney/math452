@@ -48,6 +48,28 @@ which is independent of the choice of $u$ and $v$.
 
 = 3-3-1
 
+By the Graph Theorem, we have a parametrization $X: RR^2 -> RR^3$ given by $X(u,v) = (u, v, a u v)$. Thus we have
+$
+  X_u &= (1, 0, a v) \
+  X_v &= (0, 1, a u) \
+  X_(u v) &= (0, 0, a) \
+  X_(u u) &= X_(v v) = 0
+$
+We take the orientation where $N(0, 0) = X_u times X_v = (0, 0, 1)$. At $(0, 0)$, we have
+$
+  E = X_u dot X_u = 1 \
+  F = X_u dot X_v = 0 \
+  G = X_v dot X_v = 1 \
+  N = (0, 0, 1) \
+  e = N dot X_(u u) = 0 \
+  f = N dot X_(u v) = a \
+  g = N dot X_(v v) = 0
+$
+Therefore, we have
+$
+  K = (e g - f^2)/(E G - F^2) = - a^2 wide H = 1/2 (e G - 2 f F + g E)/(E G - F^2) = 0
+$
+
 = 3-3-2
 
 = 3-3-4
