@@ -72,6 +72,64 @@ $
 
 = 3-3-2
 
+We naturally have a at each point a local parametrization given by $X(u,v) = (v cos u, v sin u, c u)$. Thus, we have
+$
+  X_u &= (- v sin u, v cos u, c) \
+  X_v &= (cos u, sin u, 0) \
+  X_(u u) &= (- v cos u, - v sin u, 0) \
+  X_(u v) &= (- sin u, cos u, 0) \
+  X_(v v) &= (0, 0, 0) \
+$
+We take
+$
+  N = (X_u times X_v)/abs(X_u times X_v) = ((c sin u, - c cos u, - v))/sqrt(c^2 + v^2)
+$
+giving us
+$
+  e &= N dot X_(u u) = 0 \
+  f &= N dot X_(u v) = - c/sqrt(c^2 + v^2) \
+  g &= N dot X_(v v) = 0 \
+$
+Any asymptotic curve given by $alpha(t) = X(u(t), v(t))$ must satisfy
+$
+  e (u')^2 + 2 f u' v' + g (v')^2 = 0
+$
+which in this case is
+$
+  - (2 c u' v')/sqrt(c^2 + v^2) = 0
+$
+Therefore, the asymptotic curves of the surface have either $u' = 0$ ($u$ constant; radial lines of fixed angle) or $v' = 0$ ($v$ constant; helical lines of fixed radius).
+
+Since $F = X_u dot X_v = 0$, we have $e G - 2 f F + g E = 0$, so the mean curvature $H$ is zero.
+
 = 3-3-4
+
+By the Graph Theorem we have a parametrization $X: RR^2 -> RR^3$ given by $X(u,v) = (u, v, u v)$. Thus, we have
+$
+  X_u &= (1, 0, v) \
+  X_v &= (0, 1, u) \
+  X_(u u) &= (0, 0, 0) \
+  X_(u v) &= (0, 0, 1) \
+  X_(v v) &= (0, 0, 0) \
+$
+We take
+$
+  N = (X_u times X_v)/abs(X_u times X_v) = ((- v, - u, 1))/sqrt(1 + u^2 + v^2)
+$
+giving us
+$
+  e &= N dot X_(u u) = 0 \
+  f &= N dot X_(u v) = 1/sqrt(1 + u^2 + v^2) \
+  g &= N dot X_(v v) = 0 \
+$
+Any asymptotic curve given by $alpha(t) = X(u(t), v(t))$ must satisfy
+$
+  e (u')^2 + 2 f u' v' + g (v')^2 = 0
+$
+which in this case is
+$
+  (2 u' v')/sqrt(1 + u^2 + v^2) = 0
+$
+Thus the asymptotic curves of the surface have either $u' = 0$ ($u$ constant) or $v' = 0$ ($v$ constant).
 
 = 3-3-5
