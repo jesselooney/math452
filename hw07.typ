@@ -23,8 +23,6 @@
 
 Suppose $p$ is a point on the curve (denoted by $alpha$). Without loss of generality, $p = alpha(0)$. Consider the curve $N(t) = N compose alpha(t)$. Since the surface is tangent to a plane along the whole curve, the normals of the surface at each point on the curve must all be equal (to the normal of the plane). Therefore, $N'(t) equiv 0$. Thus $d N_p (alpha'(0)) = N'(0) = 0$. Since $alpha'(0) != 0$, this means zero is an eigenvalue of $d N_p$, hence $K = det(d N_p) = 0$, which implies $p$ is parabolic or planar.
 
-*TODO: can we assume the curve is regular???*
-
 = 3-2-4
 
 No. One such surface $S$ is the $x y$ plane (with $k_1 = k_2 = 0$ everywhere), but we know there are planar curves with arbitrarily large curvature (circles of small radius, for instance).
@@ -133,3 +131,56 @@ $
 Thus the asymptotic curves of the surface have either $u' = 0$ ($u$ constant) or $v' = 0$ ($v$ constant).
 
 = 3-3-5
+
+We have
+$
+  X &= (u - u^3/3 + u v^2, v - v^3/3 + v u^2, u^2 - v^2) \
+  X_u &= (1 - u^2 + v^2, 2 v u, 2 u) \
+  X_v &= (2 u v, 1 - v^2 + u^2, - 2 v) \
+  X_(u u) &= (- 2 u, 2 v, 2) \
+  X_(u v) &= (2 v, 2 u, 0) \
+  X_(v v) &= (2 u, - 2 v, - 2) \
+$
+
+This yields
+$
+  E &= X_u dot X_u = (1 - u^2 + v^2)^2 + 4 v^2 u^2 + 4 u^2 &&= (1 + u^2 + v^2)^2 \
+  F &= X_u dot X_v = (1 - u^2 + v^2)(2 u v) + (1 - v^2 + u^2)(2 v u) - 4 u v &&= 0 \
+  G &= X_v dot X_v = 4 u^2 v^2 + (1 - v^2 + u^2)^2 + 4 v^2 &&= (1 + u^2 + v^2)^2 \
+$
+
+We take
+$
+  N = (X_u times X_v)/abs(X_u times X_v)
+    = ((- 2 u - 2 u v^2 - 2 u^3, 2 v + 2 v u^2 + 2 v^3, 1 - u^4 - v^4 - 2 u^2 v^2))/abs((- 2 u - 2 u v^2 - 2 u^3, 2 v + 2 v u^2 + 2 v^3, 1 - u^4 - v^4 - 2 u^2 v^2)) \
+    = ((1 + u^2 + v^2) (- 2 u, 2 v, 1 - u^2 - v^2))/abs((1 + u^2 + v^2) (- 2 u, 2 v, 1 - u^2 - v^2))
+    = ((- 2 u, 2 v, 1 - u^2 - v^2))/(1 + u^2 + v^2)
+$
+giving us
+$
+  e &= N dot X_(u u) = 2 \
+  f &= N dot X_(u v) = 0 \
+  g &= N dot X_(v v) = -2 \
+$
+
+Now
+$
+  K &= (e g - f^2)/(E G - F^2) = - 4/(1 + u^2 + v^2)^4 \
+  H &= 1/2 (e G - 2 f F + g E)/(E G - F^2) = 0 \
+  k_1 &= H + sqrt(H^2 - K) = 2/(1 + u^2 + v^2)^2 \
+  k_2 &= H - sqrt(H^2 - K) = -2/(1 + u^2 + v^2)^2 \
+$
+
+Any asymptotic curve given by $alpha(t) = X(u(t), v(t))$ must satisfy
+$
+  e (u')^2 + 2 f u' v' + g (v')^2 = 0
+$
+which in this case is
+$
+  2 (u')^2 - 2 (v')^2 = 0
+$
+so $u' = plus.minus v'$. Thus asymptotic curves either have $u - v$ constant or $u + v$ constant.
+
+= Additional \#1
+
+= Additional \#2
