@@ -183,4 +183,21 @@ so $u' = plus.minus v'$. Thus asymptotic curves either have $u - v$ constant or 
 
 = Additional \#1
 
+Parametrize the cylinder $S$ by $X: (0, 2 pi) times (0, h) -> S$ given by $X(u, v) = (r cos u, r sin u, v)$, which covers the whole cylinder except for a vertical line. We have
+$
+  X_u = (- r sin u, r cos u, 0) wide X_v = (0, 0, 1) \
+  E = r^2 wide F = 0 wide G = 1
+$
+Let $Q_epsilon = {(u, v) | u in [epsilon, 2 pi - epsilon], v in (0, h)}$ for $epsilon > 0$. Let $R_epsilon = X(Q_epsilon)$. Then
+$
+  A(R_epsilon)
+    = integral.double_(Q_epsilon) sqrt(E G - F^2) thin d u thin d v
+    = integral_0^h integral_epsilon^(2 pi - epsilon) r thin d u thin d v
+    = (2 pi - 2 epsilon) r h
+$
+Hence,
+$
+  A(S) = lim_(epsilon->0) A(R_epsilon) = 2 pi r h
+$
+
 = Additional \#2
