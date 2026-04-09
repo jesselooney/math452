@@ -44,6 +44,8 @@ which is independent of the choice of $u$ and $v$.
 
 2. The points of the sphere with inclination angle $theta in (pi slash 4, 3 pi slash 4)$. This is because the hyperboloid has vertical sides (horizontal normals) in the $x y$ plane, and then approaches positive and negative unit slope in either direction, allowing the normals to range up to $plus.minus 45 degree$. This works for either orientation of the surface due to its symmetry.
 
+#pagebreak()
+
 = 3-3-1
 
 By the Graph Theorem, we have a parametrization $X: RR^2 -> RR^3$ given by $X(u,v) = (u, v, a u v)$. Thus we have
@@ -67,6 +69,8 @@ Therefore, we have
 $
   K = (e g - f^2)/(E G - F^2) = - a^2 wide H = 1/2 (e G - 2 f F + g E)/(E G - F^2) = 0
 $
+
+#pagebreak()
 
 = 3-3-2
 
@@ -100,6 +104,8 @@ Therefore, the asymptotic curves of the surface have either $u' = 0$ ($u$ consta
 
 Since $F = X_u dot X_v = 0$, we have $e G - 2 f F + g E = 0$, so the mean curvature $H$ is zero.
 
+#pagebreak()
+
 = 3-3-4
 
 By the Graph Theorem we have a parametrization $X: RR^2 -> RR^3$ given by $X(u,v) = (u, v, u v)$. Thus, we have
@@ -129,6 +135,8 @@ $
   (2 u' v')/sqrt(1 + u^2 + v^2) = 0
 $
 Thus the asymptotic curves of the surface have either $u' = 0$ ($u$ constant) or $v' = 0$ ($v$ constant).
+
+#pagebreak()
 
 = 3-3-5
 
@@ -173,11 +181,8 @@ $
 
 Any asymptotic curve given by $alpha(t) = X(u(t), v(t))$ must satisfy
 $
-  e (u')^2 + 2 f u' v' + g (v')^2 = 0
-$
-which in this case is
-$
-  2 (u')^2 - 2 (v')^2 = 0
+  e (u')^2 + 2 f u' v' + g (v')^2 = 0 \
+  ==> 2 (u')^2 - 2 (v')^2 = 0
 $
 so $u' = plus.minus v'$. Thus asymptotic curves either have $u - v$ constant or $u + v$ constant.
 
@@ -201,3 +206,27 @@ $
 $
 
 = Additional \#2
+
+This is a cylinder of radius $2$, which we can parametrize with $X: (0, 2 pi) times RR -> S$ given by $X(u, v) = (2 cos u, 2 sin u, v)$ (which contains the point $(0, 2, 0)$). We have
+$
+  X_u = (- 2 sin u, 2 cos u, 0) wide X_v = (0, 0, 1) \
+  X_(u u) = (- 2 cos u, - 2 sin u, 0) wide X_(u v) = (0, 0, 0) wide X_(v v) = (0, 0, 0) \
+  E = 4 wide F = 0 wide G = 1 \
+$
+giving us the coefficients of the first fundamental form. We choose
+$
+  N = (X_u times X_v)/abs(X_u times X_v) = (cos u, sin u, 0)
+$
+and obtain
+$
+  e = N dot X_(u u) = -2 wide f = N dot X_(u v) = 0 wide g = N dot X_(v v) = 0
+$
+giving us the coefficients of the second fundamental form. From these, we can obtain the Gaussian and mean curvature:
+$
+  K &= (e g - f^2)/(E G - F^2) = 0 wide
+  H &= 1/2 (e G - 2 f F + g E)/(E G - F^2) = - 1/4 \
+$
+Therefore, the principal curvatures are
+$
+  k_1 = H + sqrt(H^2 - K) = 0 wide k_2 = H - sqrt(H^2 - K) = - 1/2
+$
